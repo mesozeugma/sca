@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exampleHelloWorld allChildren 1`] = `
+[
+  {
+    "text": "package code_samples;",
+    "type": "package_declaration",
+  },
+  {
+    "text": "import java.util.ArrayList;",
+    "type": "import_declaration",
+  },
+  {
+    "text": "import java.util.Random;",
+    "type": "import_declaration",
+  },
+  {
+    "text": "public class HelloWorld extends Thread implements Runnable {
+    public static void main(String[] args) {
+        run();
+    }
+
+    public void run() {
+        // a comment line
+        System.out.println("Hello World");
+    }
+}",
+    "type": "class_declaration",
+  },
+  {
+    "text": "package",
+    "type": "package",
+  },
+  {
+    "text": "code_samples",
+    "type": "identifier",
+  },
+  {
+    "text": ";",
+    "type": ";",
+  },
+  {
+    "text": "import",
+    "type": "import",
+  },
+  {
+    "text": "java.util.ArrayList",
+    "type": "scoped_identifier",
+  },
+  {
+    "text": ";",
+    "type": ";",
+  },
+  {
+    "text": "java.util",
+    "type": "scoped_identifier",
+  },
+  {
+    "text": ".",
+    "type": ".",
+  },
+  {
+    "text": "ArrayList",
+    "type": "identifier",
+  },
+  {
+    "text": "java",
+    "type": "identifier",
+  },
+  {
+    "text": ".",
+    "type": ".",
+  },
+  {
+    "text": "util",
+    "type": "identifier",
+  },
+  {
+    "text": "import",
+    "type": "import",
+  },
+  {
+    "text": "java.util.Random",
+    "type": "scoped_identifier",
+  },
+  {
+    "text": ";",
+    "type": ";",
+  },
+  {
+    "text": "java.util",
+    "type": "scoped_identifier",
+  },
+  {
+    "text": ".",
+    "type": ".",
+  },
+  {
+    "text": "Random",
+    "type": "identifier",
+  },
+  {
+    "text": "java",
+    "type": "identifier",
+  },
+  {
+    "text": ".",
+    "type": ".",
+  },
+  {
+    "text": "util",
+    "type": "identifier",
+  },
+  {
+    "text": "public",
+    "type": "modifiers",
+  },
+  {
+    "text": "class",
+    "type": "class",
+  },
+  {
+    "text": "HelloWorld",
+    "type": "identifier",
+  },
+  {
+    "text": "extends Thread",
+    "type": "superclass",
+  },
+  {
+    "text": "implements Runnable",
+    "type": "super_interfaces",
+  },
+  {
+    "text": "{
+    public static void main(String[] args) {
+        run();
+    }
+
+    public void run() {
+        // a comment line
+        System.out.println("Hello World");
+    }
+}",
+    "type": "class_body",
+  },
+  {
+    "text": "public",
+    "type": "public",
+  },
+  {
+    "text": "extends",
+    "type": "extends",
+  },
+  {
+    "text": "Thread",
+    "type": "type_identifier",
+  },
+  {
+    "text": "implements",
+    "type": "implements",
+  },
+  {
+    "text": "Runnable",
+    "type": "interface_type_list",
+  },
+  {
+    "text": "Runnable",
+    "type": "type_identifier",
+  },
+  {
+    "text": "{",
+    "type": "{",
+  },
+  {
+    "text": "public static void main(String[] args) {
+        run();
+    }",
+    "type": "method_declaration",
+  },
+  {
+    "text": "public void run() {
+        // a comment line
+        System.out.println("Hello World");
+    }",
+    "type": "method_declaration",
+  },
+  {
+    "text": "}",
+    "type": "}",
+  },
+  {
+    "text": "public static",
+    "type": "modifiers",
+  },
+  {
+    "text": "void",
+    "type": "void_type",
+  },
+  {
+    "text": "main",
+    "type": "identifier",
+  },
+  {
+    "text": "(String[] args)",
+    "type": "formal_parameters",
+  },
+  {
+    "text": "{
+        run();
+    }",
+    "type": "block",
+  },
+  {
+    "text": "public",
+    "type": "public",
+  },
+  {
+    "text": "static",
+    "type": "static",
+  },
+  {
+    "text": "(",
+    "type": "(",
+  },
+  {
+    "text": "String[] args",
+    "type": "formal_parameter",
+  },
+  {
+    "text": ")",
+    "type": ")",
+  },
+  {
+    "text": "String[]",
+    "type": "array_type",
+  },
+  {
+    "text": "args",
+    "type": "identifier",
+  },
+  {
+    "text": "String",
+    "type": "type_identifier",
+  },
+  {
+    "text": "[]",
+    "type": "dimensions",
+  },
+  {
+    "text": "[",
+    "type": "[",
+  },
+  {
+    "text": "]",
+    "type": "]",
+  },
+  {
+    "text": "{",
+    "type": "{",
+  },
+  {
+    "text": "run();",
+    "type": "expression_statement",
+  },
+  {
+    "text": "}",
+    "type": "}",
+  },
+  {
+    "text": "run()",
+    "type": "method_invocation",
+  },
+  {
+    "text": ";",
+    "type": ";",
+  },
+  {
+    "text": "run",
+    "type": "identifier",
+  },
+  {
+    "text": "()",
+    "type": "argument_list",
+  },
+  {
+    "text": "(",
+    "type": "(",
+  },
+  {
+    "text": ")",
+    "type": ")",
+  },
+  {
+    "text": "public",
+    "type": "modifiers",
+  },
+  {
+    "text": "void",
+    "type": "void_type",
+  },
+  {
+    "text": "run",
+    "type": "identifier",
+  },
+  {
+    "text": "()",
+    "type": "formal_parameters",
+  },
+  {
+    "text": "{
+        // a comment line
+        System.out.println("Hello World");
+    }",
+    "type": "block",
+  },
+  {
+    "text": "public",
+    "type": "public",
+  },
+  {
+    "text": "(",
+    "type": "(",
+  },
+  {
+    "text": ")",
+    "type": ")",
+  },
+  {
+    "text": "{",
+    "type": "{",
+  },
+  {
+    "text": "// a comment line",
+    "type": "comment",
+  },
+  {
+    "text": "System.out.println("Hello World");",
+    "type": "expression_statement",
+  },
+  {
+    "text": "}",
+    "type": "}",
+  },
+  {
+    "text": "System.out.println("Hello World")",
+    "type": "method_invocation",
+  },
+  {
+    "text": ";",
+    "type": ";",
+  },
+  {
+    "text": "System.out",
+    "type": "field_access",
+  },
+  {
+    "text": ".",
+    "type": ".",
+  },
+  {
+    "text": "println",
+    "type": "identifier",
+  },
+  {
+    "text": "("Hello World")",
+    "type": "argument_list",
+  },
+  {
+    "text": "System",
+    "type": "identifier",
+  },
+  {
+    "text": ".",
+    "type": ".",
+  },
+  {
+    "text": "out",
+    "type": "identifier",
+  },
+  {
+    "text": "(",
+    "type": "(",
+  },
+  {
+    "text": ""Hello World"",
+    "type": "string_literal",
+  },
+  {
+    "text": ")",
+    "type": ")",
+  },
+]
+`;
+
+exports[`exampleHelloWorld className 1`] = `
+{
+  "text": "HelloWorld",
+  "type": "identifier",
+}
+`;
+
+exports[`exampleHelloWorld importInfo 1`] = `
+{
+  "className": "HelloWorld",
+  "imports": [
+    "java.util",
+  ],
+  "packageName": "code_samples",
+}
+`;
+
+exports[`exampleHelloWorld importedScopedIdentifiers 1`] = `
+[
+  {
+    "text": "java.util",
+    "type": "scoped_identifier",
+  },
+  {
+    "text": "java.util",
+    "type": "scoped_identifier",
+  },
+]
+`;
+
+exports[`exampleHelloWorld packageName 1`] = `
+{
+  "text": "code_samples",
+  "type": "identifier",
+}
+`;

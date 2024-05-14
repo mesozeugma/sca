@@ -1,0 +1,158 @@
+<mat-card *ngIf="repository$ | async as repository">
+  <mat-card-header>
+    <mat-card-title>{{ repository.repositoryName }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <span matListItemTitle>{{ repository.gitCloneUrl }}</span>
+        <span matListItemLine>Git clone url</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>{{ repository.defaults.buildTool }}</span>
+        <span matListItemLine>Build tool</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>{{ repository.defaults.javaVersion }}</span>
+        <span matListItemLine>Java version</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>{{ repository.defaults.pythonVersion }}</span>
+        <span matListItemLine>Python version</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>{{ repository.defaults.workdir }}</span>
+        <span matListItemLine>Working directory</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>{{
+          repository.defaults.isSonarQubeEnabled
+        }}</span>
+        <span matListItemLine>SonarQube enabled</span>
+      </mat-list-item>
+    </mat-list>
+    <mat-divider></mat-divider>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Analyses</mat-card-title>
+      </mat-card-header>
+      <mat-card-content *ngIf="analyses$ | async as analyses">
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let analysis of analyses">
+            <mat-expansion-panel-header>
+              <mat-panel-title>{{ analysis.createdAt | date }}</mat-panel-title>
+              <mat-panel-description>
+                {{ analysis.status.type }} -
+                {{ analysis.status.updatedAt | date }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-list>
+              <mat-list-item>
+                <span matListItemTitle>{{
+                  analysis.gitCommit.createdAt | date
+                }}</span>
+                <span matListItemLine>Git commit date</span>
+              </mat-list-item>
+              <mat-list-item>
+                <span matListItemTitle>{{ analysis.gitCommit.hash }}</span>
+                <span matListItemLine>Git commit hash</span>
+              </mat-list-item>
+              <mat-list-item>
+                <span matListItemTitle>{{
+                  analysis.gitCommit.message | truncate
+                }}</span>
+                <span matListItemLine>Git commit message</span>
+              </mat-list-item>
+            </mat-list>
+
+            <mat-action-row>
+              <button
+                mat-button
+                (click)="deleteAnalysis(analysis.id)"
+                color="warn"
+              >
+                Delete
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+      <mat-card-footer>
+        <mat-paginator
+          [pageIndex]="paginationPageIndex"
+          [pageSize]="paginationPageSize"
+          [disabled]="paginationDisabled"
+          hidePageSize="true"
+          [length]="paginationItemCount"
+          (page)="pagination$.next($event)"
+          showFirstLastButtons="true"
+        />
+      </mat-card-footer>
+    </mat-card>
+    <mat-divider></mat-divider>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Most recent tasks</mat-card-title>
+      </mat-card-header>
+      <mat-card-content *ngIf="tasks$ | async as tasks">
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let task of tasks">
+            <mat-expansion-panel-header>
+              <mat-panel-title>{{ task.type }}</mat-panel-title>
+              <mat-panel-description>
+                {{ task.status.type }} - {{ task.status.updatedAt | date }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-list>
+              <mat-list-item>
+                <span matListItemTitle>{{ task.createdAt | date }}</span>
+                <span matListItemLine>createdAt</span>
+              </mat-list-item>
+              <mat-list-item *ngFor="let taskOption of task.options | keyvalue">
+                <span matListItemTitle>{{ taskOption.value }}</span>
+                <span matListItemLine>{{ taskOption.key }}</span>
+              </mat-list-item>
+            </mat-list>
+
+            <mat-action-row>
+              <button mat-button [routerLink]="['/tasks', 'view', task.id]">
+                View
+              </button>
+              <button
+                mat-button
+                (click)="approveTask(task.id)"
+                *ngIf="taskNeedsApproval(task)"
+              >
+                Approve
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+    </mat-card>
+    <mat-divider></mat-divider>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button [routerLink]="['../..', 'edit', repository.id]">
+      Edit
+    </button>
+    <button
+      mat-button
+      [routerLink]="['/tasks', 'create', 'analyze-repository']"
+      [queryParams]="{ repositoryId: repository.id }"
+    >
+      Analyze
+    </button>
+    <button
+      mat-button
+      [routerLink]="['/tasks', 'create', 'analyze-commits']"
+      [queryParams]="{ repositoryId: repository.id }"
+    >
+      Analyze commits
+    </button>
+    <button mat-button (click)="refreshTasks()">Refresh tasks</button>
+    <button mat-button (click)="deleteRepository()" color="warn">Delete</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,2344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocalGit getHistory 1`] = `
+[
+  {
+    "createdAt": 2023-05-25T23:18:02.000Z,
+    "hash": "2d0b4b786d0c7113ce76576071e1199ae68e1f02",
+    "message": "Refactoring and simplification of tests and some minor apis",
+  },
+  {
+    "createdAt": 2023-05-16T21:36:39.000Z,
+    "hash": "660dc3a1d8b5719c6e091af2973e9811d1dc4802",
+    "message": "Increased streams usage for Particle.java",
+  },
+  {
+    "createdAt": 2023-05-12T22:20:36.000Z,
+    "hash": "c25271464194c8309926ba4ecb27e5fb94088a60",
+    "message": "Increased streams usage",
+  },
+  {
+    "createdAt": 2023-05-12T21:34:41.000Z,
+    "hash": "d057453e555954f8fe12c69d595dff5106c29e20",
+    "message": "Update README.md",
+  },
+  {
+    "createdAt": 2023-05-12T21:22:44.000Z,
+    "hash": "eb331fec956998be2828023dc7281a613c4e8e5c",
+    "message": "CI label correction",
+  },
+  {
+    "createdAt": 2023-05-12T21:20:41.000Z,
+    "hash": "578cafc5ceb15861fd67df675caab83b463cdd67",
+    "message": "CI improvement",
+  },
+  {
+    "createdAt": 2023-05-12T21:08:42.000Z,
+    "hash": "c6ec062a723bd6d437096deba03305439494684d",
+    "message": "Java 17 transition CI",
+  },
+  {
+    "createdAt": 2023-05-12T21:07:40.000Z,
+    "hash": "33b3538a37c427958eabdca838edef9e965e7bab",
+    "message": "Update README.md",
+  },
+  {
+    "createdAt": 2023-05-12T21:03:38.000Z,
+    "hash": "1008301a65f55c9eac52a0bc8f851f134a9d2a65",
+    "message": "Java 17 transition",
+  },
+  {
+    "createdAt": 2023-05-12T17:23:32.000Z,
+    "hash": "1fa060a7b3d267c043f7bde4d6924d5e690c996d",
+    "message": "Model based consolidators now reflect decision time in their operations",
+  },
+  {
+    "createdAt": 2022-09-12T22:03:39.000Z,
+    "hash": "2a0e8beceb65a6c1fbacef8e05d02eea400b18ba",
+    "message": "InfrastructureModel's fitness is now calculated with a more functional approach",
+  },
+  {
+    "createdAt": 2022-09-12T21:46:52.000Z,
+    "hash": "fdeeae8b4b922282bfacdafd12f5e0e397d601e1",
+    "message": "Further improvement and simplification to capacity change management for java 8",
+  },
+  {
+    "createdAt": 2022-09-12T21:31:24.000Z,
+    "hash": "188dbfc0787ee7063f48bd403e0dc68a95475ea1",
+    "message": "Consolidator complexity reduction by splitting tick method",
+  },
+  {
+    "createdAt": 2022-09-12T21:23:05.000Z,
+    "hash": "46c1255ed26b019b4b3d75c5224961494417837a",
+    "message": "Consolidator better transformed for java8",
+  },
+  {
+    "createdAt": 2022-09-07T21:58:57.000Z,
+    "hash": "b4a18ffb32fe95ba6890a971bde6540c723c9083",
+    "message": "Simplifications on FreqSyncer and FirstFitBFD, removal of gnu trove",
+  },
+  {
+    "createdAt": 2022-09-03T22:17:00.000Z,
+    "hash": "5abe28133b4929e080c403c87bba81f9dfcf4916",
+    "message": "Import and dependency handling clarifications",
+  },
+  {
+    "createdAt": 2022-09-03T21:40:47.000Z,
+    "hash": "e4fe81d38cd10220b3934f669cbe6c91746ef0d1",
+    "message": "Minor version bumps on the build process",
+  },
+  {
+    "createdAt": 2022-09-03T21:32:27.000Z,
+    "hash": "e16dd34e1f08ee744de9a2cfd2481cb4c5b59826",
+    "message": "Merge remote-tracking branch 'origin/master'",
+  },
+  {
+    "createdAt": 2022-09-03T21:32:18.000Z,
+    "hash": "ff3309cc0e16c63b25ed454ac08bee51bbda445c",
+    "message": "Junit5 transition + freqsyncer is now much more simplified",
+  },
+  {
+    "createdAt": 2022-08-17T22:33:08.000Z,
+    "hash": "b6547df20689875fb8781174be956c6d680c028e",
+    "message": "Update README.md",
+  },
+  {
+    "createdAt": 2022-08-17T22:01:45.000Z,
+    "hash": "9f70d3d4465f0a53761a051a790be2a3db001f8f",
+    "message": "ResourceSpreader and FreqSyncer is now having fewer mega-length methods + java 11 updates",
+  },
+  {
+    "createdAt": 2022-08-12T22:32:07.000Z,
+    "hash": "0ca0782e9b5c7b2f81e36758fa768afd061f1769",
+    "message": "Further upgrades to newer java version for dispatchers and energy meters",
+  },
+  {
+    "createdAt": 2022-08-12T21:59:18.000Z,
+    "hash": "f3763bbc6980bda4d426adc29fc81af96e19fcf1",
+    "message": "Rework of SchedulingDependentMachines",
+  },
+  {
+    "createdAt": 2022-08-12T21:23:33.000Z,
+    "hash": "2478f23e410997883c121a18467025498895f87c",
+    "message": "FirstFitConsolidator one last loop missing",
+  },
+  {
+    "createdAt": 2022-08-08T22:28:15.000Z,
+    "hash": "acd0d25e68f198e8974a8f4230f13506ae35fedb",
+    "message": "FirstFitConsolidator minimal clarification",
+  },
+  {
+    "createdAt": 2022-08-08T22:18:33.000Z,
+    "hash": "79a0bc6f280c01053462922a8b486cba85caf9d3",
+    "message": "Merge remote-tracking branch 'origin/master'",
+  },
+  {
+    "createdAt": 2022-08-08T22:18:24.000Z,
+    "hash": "d3580488510497c3a23f2d836792f7b4e68a3932",
+    "message": "FirstFitConsolidator is now more in alignment with java 11",
+  },
+  {
+    "createdAt": 2022-08-04T09:06:54.000Z,
+    "hash": "7449c00bac368a81f133915cac73ae79bfec48ff",
+    "message": "Create codeql-analysis.yml",
+  },
+  {
+    "createdAt": 2022-08-04T08:29:55.000Z,
+    "hash": "9ce4c52799c43d9e241d169bbe2a0141c2052d44",
+    "message": "Create maven.yml",
+  },
+  {
+    "createdAt": 2022-07-20T20:56:32.000Z,
+    "hash": "edada61d2d9b32517a090737b28cc5660f06a74a",
+    "message": "Further cleanup and simplifications for java 11 support",
+  },
+  {
+    "createdAt": 2022-04-08T21:26:53.000Z,
+    "hash": "aa9eda07830fc6dc3e381b8b402b0ea881979e2b",
+    "message": "Several loops rewritten and simplified with new language variants",
+  },
+  {
+    "createdAt": 2022-04-08T21:09:56.000Z,
+    "hash": "50ac12d1201f5bce223090bae1de0a56d977d427",
+    "message": "A bit of cleanup based on IntelliJ's inspection",
+  },
+  {
+    "createdAt": 2022-04-08T20:46:18.000Z,
+    "hash": "1ffa1df4cb118d061ce3d57c7e39a6a0b5d50335",
+    "message": "NetworkNode state management simplification",
+  },
+  {
+    "createdAt": 2022-04-08T20:43:46.000Z,
+    "hash": "891aa1af4b6f84ced68e00f3376731db2f8a4bb5",
+    "message": "NetworkNode state management separation + java8 transition",
+  },
+  {
+    "createdAt": 2022-04-08T20:34:29.000Z,
+    "hash": "05728d3b672e6d40bfcd85d0e490ef15a8e67591",
+    "message": "Simplification of skipEventsTill",
+  },
+  {
+    "createdAt": 2022-03-31T19:20:32.000Z,
+    "hash": "be36f23a64b6edc8be76d853001a5f243a3dade4",
+    "message": "PowerTransitionGenerator is updated for java8",
+  },
+  {
+    "createdAt": 2022-03-31T18:57:23.000Z,
+    "hash": "8c901fd40bf15b30d4903a96fba11fa40d15acd4",
+    "message": "PowerTransitionGenerator is modularized a bit",
+  },
+  {
+    "createdAt": 2022-03-30T21:33:43.000Z,
+    "hash": "7bc34ca28da6ea12591a2502a3928f9565f96e66",
+    "message": "MultiPMController simplified logic in turnOnMachines",
+  },
+  {
+    "createdAt": 2022-03-30T21:07:17.000Z,
+    "hash": "a921c0128951d798b0f242cc2e4cdb9025c52271",
+    "message": "Further java 8 updates",
+  },
+  {
+    "createdAt": 2022-03-30T19:19:22.000Z,
+    "hash": "a6016535e5304975a32d45beab40aa536d722518",
+    "message": "Pom corrections for fewer warnings.",
+  },
+  {
+    "createdAt": 2022-03-30T19:05:27.000Z,
+    "hash": "83a2ac21f017dfd31eabea7886606dc179637623",
+    "message": "AlwaysOnMachines's jave 8 cleanup",
+  },
+  {
+    "createdAt": 2022-03-30T19:01:58.000Z,
+    "hash": "839364f80fecadbee28bc52567952955860d5033",
+    "message": "AggregatedEnergyMeter's cleanup",
+  },
+  {
+    "createdAt": 2022-03-30T18:48:24.000Z,
+    "hash": "ac1c44e439f890122a299c9c2c4f7208e1ea094f",
+    "message": "ShutdownAction's cleanup",
+  },
+  {
+    "createdAt": 2022-03-29T22:52:33.000Z,
+    "hash": "cc3defb05ff1a449eb0b8f585e2cd6b92f4f6a30",
+    "message": "Readme update to reflect latest dependencies",
+  },
+  {
+    "createdAt": 2022-03-29T22:45:12.000Z,
+    "hash": "6fe45cf0ad5e3a3e7f9d7f9a0632c38b85957606",
+    "message": "Updated versions for dependencies",
+  },
+  {
+    "createdAt": 2022-03-29T22:37:09.000Z,
+    "hash": "fa50ff2d4f638adda80476bbec2fe7c377fea95b",
+    "message": "Further java 8+ updates, reduced reflection use, spelling fixes",
+  },
+  {
+    "createdAt": 2022-03-29T20:48:56.000Z,
+    "hash": "97e9d81e477107ae250da452788ce5c73864159e",
+    "message": "Merge branch 'master' of git@github.com:kecskemeti/dissect-cf.git",
+  },
+  {
+    "createdAt": 2022-03-29T20:48:27.000Z,
+    "hash": "ea8c9c8c392ce325e50a3057ef0bcc514820d3e2",
+    "message": "Merge remote-tracking branch 'j11/master'",
+  },
+  {
+    "createdAt": 2022-03-28T20:44:53.000Z,
+    "hash": "940d539fe760aba76a012f652b4f0c4f291fc57d",
+    "message": "Merge pull request #3 from kecskemeti/dependabot/maven/junit-junit-4.13.1",
+  },
+  {
+    "createdAt": 2022-03-28T20:42:00.000Z,
+    "hash": "aed0cee23be09fa80b3259bc2481143915a9955b",
+    "message": "Bump junit from 4.11 to 4.13.1",
+  },
+  {
+    "createdAt": 2022-03-28T20:40:51.000Z,
+    "hash": "fa724af63132b398ea9ef5e3e15274bd0b0c2f90",
+    "message": "Depicting the consilidation changes as substantial enough for version update",
+  },
+  {
+    "createdAt": 2022-03-28T20:35:20.000Z,
+    "hash": "99ea2f8e0f52d11c94067718d36b1551494140fc",
+    "message": "Merge remote-tracking branch 'cons/NoLogging'",
+  },
+  {
+    "createdAt": 2020-06-24T16:42:27.000Z,
+    "hash": "4aebd2a429f47ffe8d6663cf28a25fc4afdabb49",
+    "message": "Code quality marker, travis link to the front",
+  },
+  {
+    "createdAt": 2020-06-11T23:00:15.000Z,
+    "hash": "7e4270674a519f6a5fed8d4603bd7982584ece30",
+    "message": "Merge remote-tracking branch 'lghclone/master'",
+  },
+  {
+    "createdAt": 2020-06-11T22:29:39.000Z,
+    "hash": "4b2158680f649baa20ac58a05c627c7a908fde0c",
+    "message": "Some WIP from last year that never reached completion",
+  },
+  {
+    "createdAt": 2020-06-11T22:07:13.000Z,
+    "hash": "255829e4312e156799bb8a0ff387796b071849a3",
+    "message": "Work in progress towards updating for java 11",
+  },
+  {
+    "createdAt": 2020-04-19T21:22:35.000Z,
+    "hash": "e5739bf632555747b4ef8f815bb3757dc557cae9",
+    "message": "A different way of handling under processing events",
+  },
+  {
+    "createdAt": 2020-02-24T16:47:24.000Z,
+    "hash": "4dd4cd8d99ab7de02c9bcceffa4e7f2a3860a56e",
+    "message": "Lambda conversion",
+  },
+  {
+    "createdAt": 2020-01-27T15:07:38.000Z,
+    "hash": "6bb15fffe836a4127b262118948d69022e1fd1f7",
+    "message": "Fixed issues with storage promise management",
+  },
+  {
+    "createdAt": 2020-01-17T13:31:49.000Z,
+    "hash": "784da56335337767fca49c280b9f6cfb0faef81e",
+    "message": "WIP on networking performance improvements",
+  },
+  {
+    "createdAt": 2019-05-16T16:39:13.000Z,
+    "hash": "4325ccc6a3b280b60bf3642ff5699c0a4c524b9e",
+    "message": "FFBFD improver applied in a consolidator",
+  },
+  {
+    "createdAt": 2019-04-26T16:20:39.000Z,
+    "hash": "e313b4b81a2d7007eb59fc8ab0de9c427a8f061a",
+    "message": "FirstFitConsolidator correctly passes the actions to ModelBased.",
+  },
+  {
+    "createdAt": 2019-04-26T15:38:33.000Z,
+    "hash": "2989f7b5fbbcafa4e13b8ad405630436054b78d4",
+    "message": "Enabling single InfrastructureModel based consolidators + refactoring",
+  },
+  {
+    "createdAt": 2019-03-20T14:51:48.000Z,
+    "hash": "5b873fa005bf551bb574a95312b487e98cda212c",
+    "message": "Bugfix: scheduler checks for the existence of the VM's VA before deploy",
+  },
+  {
+    "createdAt": 2018-11-11T21:17:51.000Z,
+    "hash": "c9008738dbac47af406a1a3db2db3cec3bbca0ab",
+    "message": "PSO improvements about final selection and bugfixes",
+  },
+  {
+    "createdAt": 2018-10-10T13:30:11.000Z,
+    "hash": "094e8fa0c5f6035352648d32fe903b8ebe16457d",
+    "message": "Ordering VM and PM arrays for better arithmetic vector behaviour",
+  },
+  {
+    "createdAt": 2018-10-04T10:42:26.000Z,
+    "hash": "b9d142bcdb57644fe086dc90e95fce44e690faaf",
+    "message": "A bit faster in particle physical machine mapping",
+  },
+  {
+    "createdAt": 2018-10-03T20:16:47.000Z,
+    "hash": "8d2bd2316cdf9dd864c4aafbbcbb80286e238654",
+    "message": "No longer retaining the base solution, instead just passing it when optimize returns it",
+  },
+  {
+    "createdAt": 2018-10-03T16:24:58.000Z,
+    "hash": "64d68db06768207d0de3ab8c7c7af2dbbcec5eca",
+    "message": "Bit better unsubscription management in the base consolidator",
+  },
+  {
+    "createdAt": 2018-09-24T10:47:17.000Z,
+    "hash": "eceadf2fc3606325d84a17157695d5b1bb098d95",
+    "message": "Minor improvements and additions to PSO",
+  },
+  {
+    "createdAt": 2018-09-10T09:38:57.000Z,
+    "hash": "19f2de3f02218ac4d7a36be77cc5b3e5a8c5a369",
+    "message": "Fix for a regression introduced during PSO changes",
+  },
+  {
+    "createdAt": 2018-09-03T14:33:56.000Z,
+    "hash": "6da1454b8f09e34264668225918da512c0b279b1",
+    "message": "Fixes to convergence and performance issues in PSO",
+  },
+  {
+    "createdAt": 2018-07-30T08:15:14.000Z,
+    "hash": "3d0d342125bd94e66e0bc2081586b8d027ab8ee6",
+    "message": "Minor PSO speed improvements + testing an alternative ArithmeticVector",
+  },
+  {
+    "createdAt": 2018-07-29T20:42:03.000Z,
+    "hash": "c64d0629e79eca5b3fc900cd7ba7d576b314cdb0",
+    "message": "ArithmeticVector is now backed by a trove array",
+  },
+  {
+    "createdAt": 2018-07-29T20:32:04.000Z,
+    "hash": "7748fed203367b4e31ebc102dc68ffa706be79ef",
+    "message": "Arithmetic vector is not behaving as constant",
+  },
+  {
+    "createdAt": 2018-07-28T23:43:38.000Z,
+    "hash": "0f3d40a16271d88e231625aed6fd79e4f2cb3555",
+    "message": "Fixes for trivial PSO runtime errors",
+  },
+  {
+    "createdAt": 2018-07-27T23:32:11.000Z,
+    "hash": "e2e013d011ebb08663533d8b31c158daa5412605",
+    "message": "GenHelper is more widely used",
+  },
+  {
+    "createdAt": 2018-07-27T23:12:18.000Z,
+    "hash": "a50171e3c543d3c041a180e47815aaa6c59fee2a",
+    "message": "More pluggable local search techniques",
+  },
+  {
+    "createdAt": 2018-07-27T22:40:31.000Z,
+    "hash": "4d9225bdcb02cfdccc4ee0c7c376b5cfa2dd1258",
+    "message": "Removed the on/off state from ModelPM, instead isHostingVMs is used",
+  },
+  {
+    "createdAt": 2018-07-27T22:24:09.000Z,
+    "hash": "ddd36ac6793c77dd00559d806cac0b79c3014459",
+    "message": "Minor cleanup for PSO",
+  },
+  {
+    "createdAt": 2018-07-27T09:46:01.000Z,
+    "hash": "69743f160dde0d6478126e72ab121cc6e160fbc7",
+    "message": "PSO updated so it is focused on its iteration",
+  },
+  {
+    "createdAt": 2018-07-26T22:27:11.000Z,
+    "hash": "47ca526cb6ba68571bb108d3305f39b23813aaba",
+    "message": "WIP towards extracting the main iterative loop from the consolidators",
+  },
+  {
+    "createdAt": 2018-07-26T11:26:33.000Z,
+    "hash": "387155162d12e393fb41e7c53b66c5f16bf4e401",
+    "message": "Genhelper changes ensure PMs will be never used outside of the actual IM",
+  },
+  {
+    "createdAt": 2018-07-26T10:56:45.000Z,
+    "hash": "5ae5f2f9b6e22b5a8ecdd6509f00a5e2be096bd0",
+    "message": "Move the Ga level poptoString to ML based so it is available to all",
+  },
+  {
+    "createdAt": 2018-07-20T14:50:34.000Z,
+    "hash": "48a76e2cdc72494fb71a4f476fa5cc95c0234dd6",
+    "message": "Fixes a long standing anomaly with das2",
+  },
+  {
+    "createdAt": 2018-07-19T13:20:22.000Z,
+    "hash": "7151d51f226d6dadf8683d31902e1d0b5c44f703",
+    "message": "Improvements to allow better support for the ConsFriendly PM scheduler",
+  },
+  {
+    "createdAt": 2018-07-19T11:30:53.000Z,
+    "hash": "587b134e3a4b4813c2321b834a366c3d26993af8",
+    "message": "Removing the possibility of reissuing a turnon operation for a PM",
+  },
+  {
+    "createdAt": 2018-07-18T16:32:55.000Z,
+    "hash": "c6c3fd86d04351477a773713ae6e4e5ad3170d67",
+    "message": "Significant bugfixes on fitness and action handling",
+  },
+  {
+    "createdAt": 2018-07-18T13:42:01.000Z,
+    "hash": "6ff59b147af98bd88d640f03e1d2231ddc8a02f3",
+    "message": "Refactoring, further simplification of InfrastructureModels and Actions",
+  },
+  {
+    "createdAt": 2018-07-18T08:39:11.000Z,
+    "hash": "0962c672a788fcae32d2b6b246b9e5b3e2564db4",
+    "message": "ModelVM shallow copy issues fixed",
+  },
+  {
+    "createdAt": 2018-07-17T22:39:53.000Z,
+    "hash": "83692546a7df3c2363aea54581a63dd0f1a4e36a",
+    "message": "Boolean generation changes",
+  },
+  {
+    "createdAt": 2018-07-17T21:48:24.000Z,
+    "hash": "4be8c93027184c8e2dc17f5e20c754b1c6643e41",
+    "message": "A small loop removed from ABC",
+  },
+  {
+    "createdAt": 2018-07-17T21:34:19.000Z,
+    "hash": "f04e95a3bce54b8727e53a6de4c1b9c1b4bf4776",
+    "message": "Better than fix to better match the original",
+  },
+  {
+    "createdAt": 2018-07-17T21:21:59.000Z,
+    "hash": "e63bab9b97b8b146e50e296efab9d05912294ad0",
+    "message": "Migration count is now updated only in one location",
+  },
+  {
+    "createdAt": 2018-07-17T16:01:42.000Z,
+    "hash": "e122033a3273a213e95a11954a6bf0c9634d51b3",
+    "message": "MBC refactoring and simplification",
+  },
+  {
+    "createdAt": 2018-07-17T14:53:40.000Z,
+    "hash": "7180e13918b59c25cc9e3c520683954412b5759e",
+    "message": "Minor revision on Action handling",
+  },
+  {
+    "createdAt": 2018-07-17T14:23:58.000Z,
+    "hash": "d1a712b18e737a3ba91e7dedd8965e13d4f24721",
+    "message": "GA's double RNG use reduced to a single call",
+  },
+  {
+    "createdAt": 2018-07-17T14:20:41.000Z,
+    "hash": "e036c7ecfe57b01f2d80519c9c56dc8fab264b0c",
+    "message": "Using a bit faster PRNG from the same package, reverting improve on ABC",
+  },
+  {
+    "createdAt": 2018-07-16T20:38:14.000Z,
+    "hash": "f67817b1ebdc76d7037a613afe4cc3ba9eddada9",
+    "message": "RNG change to a slightly faster one",
+  },
+  {
+    "createdAt": 2018-07-16T16:14:06.000Z,
+    "hash": "6b6933c528bb48f40415cf5e0a50da842a795e34",
+    "message": "Minor performanace tweaks to speed up ABC a bit",
+  },
+  {
+    "createdAt": 2018-07-15T23:44:36.000Z,
+    "hash": "6e6fb4c2cf8d4be512019fc5ff8c0e1db558a1ed",
+    "message": "ABC mutation is tried on every pop member only once.",
+  },
+  {
+    "createdAt": 2018-07-15T22:51:25.000Z,
+    "hash": "7537f28a2cf7606463622e3e7c21f5957e7916bb",
+    "message": "Another bugfix",
+  },
+  {
+    "createdAt": 2018-07-15T22:50:27.000Z,
+    "hash": "6ef8ed46114173c09f6435b9a94ebff5dff90eed",
+    "message": "better handling of special pop = 1 case",
+  },
+  {
+    "createdAt": 2018-07-15T22:46:59.000Z,
+    "hash": "5a64e08513d9286bd94963dd933c20ae912d6164",
+    "message": "indexing bug fix.",
+  },
+  {
+    "createdAt": 2018-07-15T22:46:10.000Z,
+    "hash": "a2948a8ed3b56a1dfe0f31af23ac0b165b27d8cd",
+    "message": "Special condition handling in ABC",
+  },
+  {
+    "createdAt": 2018-07-15T22:41:56.000Z,
+    "hash": "223e73353e1a94371564ce3ba6388db2c301b935",
+    "message": "Further improvements on ABC's probability calculations",
+  },
+  {
+    "createdAt": 2018-07-15T22:28:02.000Z,
+    "hash": "900058846dac66d13e2d1555899825ce9a28eab0",
+    "message": "Collectionless trial on ABC's probability test",
+  },
+  {
+    "createdAt": 2018-07-15T22:15:13.000Z,
+    "hash": "0a975f51669795093397cb388b1eb5c81a941351",
+    "message": "Might improve upon ABC's probability metric",
+  },
+  {
+    "createdAt": 2018-07-15T22:00:07.000Z,
+    "hash": "9d5c80a33a9b9aecb72b37aef759b174320bd816",
+    "message": "Removed the fitness class (with some minor troubles with Particle)",
+  },
+  {
+    "createdAt": 2018-07-15T21:31:54.000Z,
+    "hash": "c19684d346a7c6d4642a414364d1fb61febd205a",
+    "message": "Bettercheck",
+  },
+  {
+    "createdAt": 2018-07-15T21:20:50.000Z,
+    "hash": "e23efd64714223b19c6e981370c0a833f8e54587",
+    "message": "Logging completely dropped as with the rest of the simulator",
+  },
+  {
+    "createdAt": 2018-07-15T21:15:22.000Z,
+    "hash": "242076f91d49ef3ba363e7c0ec7885d41787a0a0",
+    "message": "Logging reduced to some conditionals if unnecessary + simpler ModelPM",
+  },
+  {
+    "createdAt": 2018-07-15T15:13:46.000Z,
+    "hash": "bcd7f1b936464fc7ea2b0e69d102c12863bf934b",
+    "message": "Removal of the half developed reservation feature of ModelPM",
+  },
+  {
+    "createdAt": 2018-07-15T14:40:22.000Z,
+    "hash": "c0feacc5b39e967d317cf8b2625be24e3d2a3f55",
+    "message": "Removing state from ModelPM (just keeping on/off)",
+  },
+  {
+    "createdAt": 2018-07-15T14:14:06.000Z,
+    "hash": "d93635c59b48e03b06eb1283aaed09e73f2f9377",
+    "message": "ModelPM stripped of states that only FF consolidator would use",
+  },
+  {
+    "createdAt": 2018-07-15T13:31:03.000Z,
+    "hash": "3dfc2bae7dea39a3c4249ecd62bc0985e08029c1",
+    "message": "ModelPM preallocates VM array now",
+  },
+  {
+    "createdAt": 2018-07-13T16:21:08.000Z,
+    "hash": "3bcda309864d992f66effe7d6da93fa24abe5bd7",
+    "message": "Immutable PM/VM details are only shallow copied",
+  },
+  {
+    "createdAt": 2018-07-13T15:12:16.000Z,
+    "hash": "e581821446f35b43a04c69acb3259959d88b45b6",
+    "message": "Moving population to a fixed size array.",
+  },
+  {
+    "createdAt": 2018-07-13T14:43:05.000Z,
+    "hash": "62bc1684f4501bb1b61d60e7b36e48544eb2a80b",
+    "message": "Simplified property handling and population generation for ML solutions",
+  },
+  {
+    "createdAt": 2018-07-13T13:54:25.000Z,
+    "hash": "949e39a386fc641d618e133f34959b4d481f894b",
+    "message": "ModelPM/VM are the primary source of info now",
+  },
+  {
+    "createdAt": 2018-07-11T21:55:22.000Z,
+    "hash": "06d0cee402f997e0f4353dd19b53d1a1cec6e6bd",
+    "message": "Elliminating a method to get free resources from modelpm",
+  },
+  {
+    "createdAt": 2018-07-11T21:50:33.000Z,
+    "hash": "3c7f2de717ad5c289f16ede71d0fe7de1447a6e1",
+    "message": "Bugfix for new solution generation",
+  },
+  {
+    "createdAt": 2018-07-11T21:33:26.000Z,
+    "hash": "34b35b301935bdba254d638cc40f2a8132a688b9",
+    "message": "Unified mapping handling in Solution, fewer new objects from ModelPM",
+  },
+  {
+    "createdAt": 2018-07-11T16:35:27.000Z,
+    "hash": "825827ddfe3ea870efada08d6a90c731ed2323d5",
+    "message": "Minor optimisations and simplifications in preparation for merge",
+  },
+  {
+    "createdAt": 2018-07-11T12:28:33.000Z,
+    "hash": "eea26fc5d37380d02687dfa5f013198eda0de5a6",
+    "message": "Making sure the allocation checks don't take effect all the time",
+  },
+  {
+    "createdAt": 2018-07-11T12:26:27.000Z,
+    "hash": "a4dc617b8454b2b32edb0a13cde3c467c39a0378",
+    "message": "Solution simplifications, optimisations and unused code removals",
+  },
+  {
+    "createdAt": 2018-07-11T11:52:55.000Z,
+    "hash": "e57d1f88834f0b21df607e66c562550b98af995c",
+    "message": "Removing the only partially implemented on-off scheduler",
+  },
+  {
+    "createdAt": 2018-07-06T22:03:11.000Z,
+    "hash": "1be277fb0fc97dc00797cc064729d1535b07c76e",
+    "message": "Merge remote-tracking branch 'ghorig/master'",
+  },
+  {
+    "createdAt": 2018-07-05T21:39:24.000Z,
+    "hash": "a488200acf936643b5f5975f2a3fcc20dbfa32f6",
+    "message": "Allows reducing the number of calls to the actual consolidation method",
+  },
+  {
+    "createdAt": 2018-06-22T09:36:01.000Z,
+    "hash": "deb27a3f0c022d3b41f11269801e8f1a680040df",
+    "message": "Fixing infinite loop in simpleconsolidator based localsearch",
+  },
+  {
+    "createdAt": 2018-06-21T16:01:28.000Z,
+    "hash": "85b6eca7736af93dcae031c24f397ec701f9c5b2",
+    "message": "Fixed a missing super method call that caused a nullpointer.",
+  },
+  {
+    "createdAt": 2018-06-21T14:53:08.000Z,
+    "hash": "f7f635cb2a40a8e6f34f98c8361544f907e20584",
+    "message": "General performance improvements",
+  },
+  {
+    "createdAt": 2018-06-21T13:15:21.000Z,
+    "hash": "65ee857ac827f13eb2e7c239796142b0c9c52100",
+    "message": "Removal of the ResourceVector.",
+  },
+  {
+    "createdAt": 2018-05-14T12:05:25.000Z,
+    "hash": "81e69c66d02be477d87cc62fa34ef154dd86c033",
+    "message": "Merge remote-tracking branch 'rpOrigi/master'",
+  },
+  {
+    "createdAt": 2018-05-13T17:40:52.000Z,
+    "hash": "ba1114926a0baae5bc16e774832d297e204522fb",
+    "message": "Bugfixing in PSO",
+  },
+  {
+    "createdAt": 2018-05-13T14:56:38.000Z,
+    "hash": "a9ca549edfd863a534bbd98dd981cbbebeecb17a",
+    "message": "Fixes the exception thrown when a VM is to be migrated to a non-running PM",
+  },
+  {
+    "createdAt": 2018-05-13T14:21:59.000Z,
+    "hash": "7c1219dde9fa1e393857dbc49e05c90e28986e42",
+    "message": "PSO fix",
+  },
+  {
+    "createdAt": 2018-05-07T05:54:53.000Z,
+    "hash": "9693c8b4ed66209bce7128c8de0e9365dc49f05a",
+    "message": "Merge remote-tracking branch 'rpOrigi/master'",
+  },
+  {
+    "createdAt": 2018-05-06T23:31:40.000Z,
+    "hash": "11355fae0e059f45294935f635eec334dd38b03a",
+    "message": "Enables the model-based consolidators to work with a PM scheduler that schedules PMs autonomously, without implementing IControllablePmScheduler",
+  },
+  {
+    "createdAt": 2018-04-15T15:31:08.000Z,
+    "hash": "fba980d3f73fe72d9adbd6dec745e28ff8313b8c",
+    "message": "Merge branch 'master' of https://github.com/kecskemeti/dissect-cf.git",
+  },
+  {
+    "createdAt": 2018-04-15T15:26:56.000Z,
+    "hash": "211b1b8339e55ac873855bd86143e71b2c9eaf97",
+    "message": "Fixed some redundancies and unused objects.",
+  },
+  {
+    "createdAt": 2018-04-15T14:59:16.000Z,
+    "hash": "a16b671cef3a9c00f19d428ebeea689982d1cefb",
+    "message": "Removed some redundancies",
+  },
+  {
+    "createdAt": 2018-04-14T22:16:45.000Z,
+    "hash": "a4ad13982f80b2333304797bd7db1659e0b8ade6",
+    "message": "Updates to resolve issues with stricter javadoc",
+  },
+  {
+    "createdAt": 2018-04-14T21:21:17.000Z,
+    "hash": "0f9adb2fc3ed24b149742db6402837e0bac4be4a",
+    "message": "Enables javadoc compile with JDK9 (javadoc plugin update)",
+  },
+  {
+    "createdAt": 2018-04-09T15:48:08.000Z,
+    "hash": "d45fde1733a15907eb1ea4885997f7ae81f8490e",
+    "message": "Minor performance improvement to the simple consolidator",
+  },
+  {
+    "createdAt": 2018-03-28T13:15:03.000Z,
+    "hash": "063cdf8374ddb1cfdbdcd0215a68ed4c2e19607d",
+    "message": "Merge remote-tracking branch 'ghorig/master'",
+  },
+  {
+    "createdAt": 2018-03-26T16:21:47.000Z,
+    "hash": "3e3ba384ce9644086b4661887299032e520d43e1",
+    "message": "Newest overhaul of deferred event aggregation",
+  },
+  {
+    "createdAt": 2018-03-20T16:47:39.000Z,
+    "hash": "4ddadf38eac6c3df2578649132d16f212fdc4b77",
+    "message": "Ensuring the totalQueued value is 0 if the queue is empty.",
+  },
+  {
+    "createdAt": 2018-03-20T16:46:20.000Z,
+    "hash": "82bde8b282c9dcc4ec69552ca1d6a7304754699d",
+    "message": "VM destruction optimisations",
+  },
+  {
+    "createdAt": 2018-03-20T16:39:57.000Z,
+    "hash": "e2575fb663748ed3fc6303a7e50df19cf7bae799",
+    "message": "Merge branch 'master' of git@github.com:kecskemeti/dissect-cf.git",
+  },
+  {
+    "createdAt": 2018-03-03T22:08:30.000Z,
+    "hash": "52554a520f01ce03919140a70d4ec796569609bf",
+    "message": "Merge remote-tracking branch 'rpOrigi/master'",
+  },
+  {
+    "createdAt": 2018-03-03T13:04:21.000Z,
+    "hash": "53e5d61b8cab66e90d9ce940e5400f6eef4faf24",
+    "message": "Bugfix regarding the initialization of the population / swarm",
+  },
+  {
+    "createdAt": 2018-03-01T10:41:24.000Z,
+    "hash": "32e1ae155c47b3629da700e19a7db38c5ff71dab",
+    "message": "Updated the pom.xml to allow the reuse of test cases in other projects",
+  },
+  {
+    "createdAt": 2018-02-27T15:49:44.000Z,
+    "hash": "1b7edeae5c558fe86c8c734857ead1d0f13a31da",
+    "message": "Merge remote-tracking branch 'rpOrigi/master'",
+  },
+  {
+    "createdAt": 2018-02-26T12:47:06.000Z,
+    "hash": "25f09358d031ac7ef3e2b1eff6c0901ccc6cdf7f",
+    "message": "Implemented the possibility to use the algorithm out of the SimpleConsolidator",
+  },
+  {
+    "createdAt": 2018-02-23T12:53:40.000Z,
+    "hash": "27799b258b06ad3e345c2559346a2c46ce2a8730",
+    "message": "Merge remote-tracking branch 'rpOrigi/master'",
+  },
+  {
+    "createdAt": 2018-02-21T00:19:02.000Z,
+    "hash": "dfa7187a384a977b113e6968d0679b4c1ee521d0",
+    "message": "Implemented local search inside pso, small fixes inside other classes",
+  },
+  {
+    "createdAt": 2018-02-18T18:33:43.000Z,
+    "hash": "faa6219b90bba2a871d906991e0df37530876b77",
+    "message": "Progression in implementing local search inside pso, but not finished",
+  },
+  {
+    "createdAt": 2017-11-06T16:29:54.000Z,
+    "hash": "2be19320b4da2bb39f19f08b40e43713869d2f71",
+    "message": "Compiler requirements increased to 1.8 + consolidationtest ignored",
+  },
+  {
+    "createdAt": 2017-11-06T16:25:46.000Z,
+    "hash": "1432bd4e4b3ef49c6d4e2fb91a18b3ee59a09dc5",
+    "message": "Merge remote-tracking branch 'rpOrigi/master'",
+  },
+  {
+    "createdAt": 2017-10-31T00:05:11.000Z,
+    "hash": "0ef6ca01faae4c3de52b4dceb4b9e57e890575b4",
+    "message": "Improving randomly created solutions by means of local search",
+  },
+  {
+    "createdAt": 2017-10-30T22:09:06.000Z,
+    "hash": "e596817bd65de1413e7bd9e3091a95ab3c4e76b6",
+    "message": "Closest aggregated deferred event is detected similarly to timed, might be good to merge the two",
+  },
+  {
+    "createdAt": 2017-10-30T00:32:00.000Z,
+    "hash": "65517f5af257cd4f82d537402e94deb812ce505a",
+    "message": "Bugfix, Solution.improve() method for improving a solution using local search",
+  },
+  {
+    "createdAt": 2017-10-29T16:15:06.000Z,
+    "hash": "d43a29587f9e5499ca5918b1c9814d5ff95d4c38",
+    "message": "Merge remote-tracking branch 'rpOrigi/master'",
+  },
+  {
+    "createdAt": 2017-10-29T15:35:21.000Z,
+    "hash": "9d4281041ac05357510ba4599c0c85fe28f1179f",
+    "message": "Abc includes now some first fit solutions",
+  },
+  {
+    "createdAt": 2017-10-28T23:09:28.000Z,
+    "hash": "179cfe734ca35b367c658e770c52cc6e0591d0ac",
+    "message": "Redundant knowledge in Solution to improve performance and enable local improvements",
+  },
+  {
+    "createdAt": 2017-10-28T16:47:14.000Z,
+    "hash": "e47a1b6ef037d1a15a874c6ec655b14bfc19f6ea",
+    "message": "Pso now use some first fit particles",
+  },
+  {
+    "createdAt": 2017-10-27T13:59:06.000Z,
+    "hash": "70e2a9035d973f54ab263c24b543cae7b00bc9a4",
+    "message": "Performance Fix",
+  },
+  {
+    "createdAt": 2017-10-27T13:39:02.000Z,
+    "hash": "ee88d5b50a56e814545566a2868afaa328de9410",
+    "message": "Bugfix of FirstFitConsolidator",
+  },
+  {
+    "createdAt": 2017-10-26T15:44:59.000Z,
+    "hash": "b48c41ec84b071d590ebc0a91af487cc6857262f",
+    "message": "Performance improvements to the ABC and GA consolidators",
+  },
+  {
+    "createdAt": 2017-10-25T23:53:45.000Z,
+    "hash": "138e27d47b9f49cccc899451669a9359c695fac0",
+    "message": "Removed unused code, small fixes",
+  },
+  {
+    "createdAt": 2017-10-25T17:18:20.000Z,
+    "hash": "7fdf6219ae3283adfee81930ffd820f77f46a52b",
+    "message": "Few Fixes, but there is still a problem with the ffc",
+  },
+  {
+    "createdAt": 2017-10-21T12:05:17.000Z,
+    "hash": "3fc1e5b2e4a911c4821e85c506f60b7826441388",
+    "message": "Bugfix concerning the thresholds.",
+  },
+  {
+    "createdAt": 2017-10-20T10:24:27.000Z,
+    "hash": "1e270b32b28659ae60bf8c8b5b1ecb7cf5ff861f",
+    "message": "Merge remote-tracking branch 'rpOrigi/master'",
+  },
+  {
+    "createdAt": 2017-10-20T10:10:27.000Z,
+    "hash": "1453d01f9b9eb555f660218125532c392dd7d6ca",
+    "message": "Less Logging in PSO algorithm",
+  },
+  {
+    "createdAt": 2017-10-18T20:45:30.000Z,
+    "hash": "4d5239eb233f4a2466a8411634a0c7c51a12a614",
+    "message": "Added Solution with unchanged location inside Ga and Abc",
+  },
+  {
+    "createdAt": 2017-10-18T16:52:20.000Z,
+    "hash": "a48013ba6430e62266ec3d7d24f0d889494f119d",
+    "message": "Added Particle with unchanged location to PsoConsolidator",
+  },
+  {
+    "createdAt": 2017-10-18T15:35:12.000Z,
+    "hash": "c2ba9579bbd2eadfb21d4393923014f5968ac301",
+    "message": "ConsolidationFriendlyPmScheduler is now used inside the test file",
+  },
+  {
+    "createdAt": 2017-10-18T14:59:20.000Z,
+    "hash": "dd72ad0c128a21e7616e145e8256301199cb32bc",
+    "message": "Bugfixing",
+  },
+  {
+    "createdAt": 2017-10-17T23:22:39.000Z,
+    "hash": "948400c97fbb9b0da929a398690a4111c5b9ed2e",
+    "message": "Bugfixing",
+  },
+  {
+    "createdAt": 2017-10-17T17:08:27.000Z,
+    "hash": "19ee721e93f0b92e92392abf46605ea0207f4d02",
+    "message": "Merge remote-tracking branch 'upstream/master'",
+  },
+  {
+    "createdAt": 2017-10-16T17:30:24.000Z,
+    "hash": "e49484cf0c2d0b5c4bf9523c704790857dd9a79a",
+    "message": "Merge remote-tracking branch 'githubOrigi/master'",
+  },
+  {
+    "createdAt": 2017-10-16T17:28:18.000Z,
+    "hash": "5bfe68b1bfabd03cb5af314890fccad373a655e0",
+    "message": "Provides explanation on errenous migration requests to PMs",
+  },
+  {
+    "createdAt": 2017-10-14T23:58:00.000Z,
+    "hash": "4a6cf749801fc4f1e751f5f984bbd90e9b71f68d",
+    "message": "New PM scheduler (ConsolidationFriendlyPmScheduler) that works well with VM scheduler as well as VM consolidator, plus some small additions for debugging",
+  },
+  {
+    "createdAt": 2017-10-14T23:54:34.000Z,
+    "hash": "5cf5d53481a6f00b8e4095f9dfc01756ec65fb40",
+    "message": "Small additions to ease bugfixing",
+  },
+  {
+    "createdAt": 2017-10-11T17:08:45.000Z,
+    "hash": "7650434fdfb35639e75de6911c7be1e3f93fc546",
+    "message": "Changes to the OnOffScheduler",
+  },
+  {
+    "createdAt": 2017-10-09T20:35:10.000Z,
+    "hash": "a0e08bae697d3a4c5a0beddf21c684baca6f0dc2",
+    "message": "Merge remote-tracking branch 'upstream/master'",
+  },
+  {
+    "createdAt": 2017-10-09T20:18:48.000Z,
+    "hash": "e409d8702880e217081a6984b556a294435fd185",
+    "message": "Added seed for randoms inside the properties file",
+  },
+  {
+    "createdAt": 2017-10-09T19:59:48.000Z,
+    "hash": "a03f058a3320ecd1a783b23bdd801a3bdcd3d0c1",
+    "message": "Initial API that enables rudimentary experiments with SGX",
+  },
+  {
+    "createdAt": 2017-10-05T15:17:23.000Z,
+    "hash": "3793c91db4e884ad8a8bbe974638a6625ae7ae00",
+    "message": "Merge remote-tracking branch 'choose_remote_name/master'",
+  },
+  {
+    "createdAt": 2017-10-05T15:14:31.000Z,
+    "hash": "1b31a650fd823aad67e25aaf9a058491a68d7501",
+    "message": "reset",
+  },
+  {
+    "createdAt": 2017-10-05T14:48:01.000Z,
+    "hash": "0f73ebb3500c976fd57f9f021b417cdf54170042",
+    "message": "reset to last commit",
+  },
+  {
+    "createdAt": 2017-09-29T23:16:54.000Z,
+    "hash": "7425e239b49667f026200f3e7a986736527040ff",
+    "message": "Even more time for migration",
+  },
+  {
+    "createdAt": 2017-09-29T23:14:27.000Z,
+    "hash": "2099e9f258a43d3111001d5a34fb160d54db7ab0",
+    "message": "Allowing longer migration time",
+  },
+  {
+    "createdAt": 2017-09-29T14:46:46.000Z,
+    "hash": "e0e7511dba1d539644daac74d8d4b0b1b83d96ce",
+    "message": "Merge remote-tracking branch 'rpOrigi/master'",
+  },
+  {
+    "createdAt": 2017-09-29T14:37:37.000Z,
+    "hash": "1f3f6f9ada5164e27f9dd34881763eb7ce056b36",
+    "message": "WIP on stat collection",
+  },
+  {
+    "createdAt": 2017-09-29T14:01:09.000Z,
+    "hash": "a649c32741f110742ed4875abbe6ec1f96de0246",
+    "message": "Bugfix, now tests are running with correct defaults",
+  },
+  {
+    "createdAt": 2017-09-29T08:18:03.000Z,
+    "hash": "ec0e895b5f0a55f4a138885ecb84b02bc78589f1",
+    "message": "small fixes and adjustments",
+  },
+  {
+    "createdAt": 2017-09-28T13:28:11.000Z,
+    "hash": "c4f8a62143bcf6619247b7e0b7dbc8ef10e37fa3",
+    "message": "Property handling simplifications and improvements",
+  },
+  {
+    "createdAt": 2017-09-28T11:48:58.000Z,
+    "hash": "a763908995b7e9a79840ed17042af8a432147a88",
+    "message": "Ignoring the faulty test case",
+  },
+  {
+    "createdAt": 2017-09-28T11:45:43.000Z,
+    "hash": "1ffb39496ed4388d41f9a20546305df94a732849",
+    "message": "Merge remote-tracking branch 'rpOrigi/master'",
+  },
+  {
+    "createdAt": 2017-09-26T21:01:34.000Z,
+    "hash": "c6587dbe56a03ed6ecdfd80df5f2c47ee37f9be9",
+    "message": "bugfix",
+  },
+  {
+    "createdAt": 2017-09-26T21:00:19.000Z,
+    "hash": "e8e56750412a125054ac4d9a547cd10697b53bd9",
+    "message": "Removed ConsolidationController Test to seperate the examples and the master branch",
+  },
+  {
+    "createdAt": 2017-09-25T15:44:45.000Z,
+    "hash": "eb142e02fac1365cfbc233b14ea32d4692b47a80",
+    "message": "Merge branch 'master' of https://github.com/RenePonto/dissect-cf",
+  },
+  {
+    "createdAt": 2017-09-23T20:25:49.000Z,
+    "hash": "f5d877af7975fc8d225469c30566482a6e5503fe",
+    "message": "Moved MultiTenant-classes to the examples project",
+  },
+  {
+    "createdAt": 2017-09-23T09:06:05.000Z,
+    "hash": "0351beb91b3c1f218b9634a9a7d784d2acdfefb0",
+    "message": "Moved the ConsolidationController to the examples project",
+  },
+  {
+    "createdAt": 2017-09-22T14:35:02.000Z,
+    "hash": "d94c84219466c35996bf08849b0cbf08fc358eca",
+    "message": "update of pom",
+  },
+  {
+    "createdAt": 2017-09-22T14:28:17.000Z,
+    "hash": "7f9eb5dd53f7a1e0656d10b6914e6fd06e373d94",
+    "message": "Merge branch 'master' of https://github.com/RenePonto/dissect-cf",
+  },
+  {
+    "createdAt": 2017-09-22T14:10:02.000Z,
+    "hash": "de52351d4c58c95edcb26359a6122f64384f94b8",
+    "message": "Last bugfixing, everything is running now correctly",
+  },
+  {
+    "createdAt": 2017-09-18T08:43:13.000Z,
+    "hash": "749f65af98b930fbd5404c04b1597349dcefe6c3",
+    "message": "Bugfixing",
+  },
+  {
+    "createdAt": 2017-09-17T11:45:30.000Z,
+    "hash": "583cb45a6a76e2048a4d5802c8fa63636138e72e",
+    "message": "Implemented save function for the results",
+  },
+  {
+    "createdAt": 2017-09-15T23:10:22.000Z,
+    "hash": "2da3c5c8ed1f036164c579accac293e5277ad60f",
+    "message": "bugfix",
+  },
+  {
+    "createdAt": 2017-09-15T17:17:59.000Z,
+    "hash": "2e78199a3c39b18b3d722ebc0a259c8e0c19d85e",
+    "message": "fixed bugs inside saving method",
+  },
+  {
+    "createdAt": 2017-09-14T13:23:33.000Z,
+    "hash": "260ad1a8e9a4c9421607db1c1c9ab9d58aca0d3a",
+    "message": "Event skipping requests to Timed are propagated to deferred events",
+  },
+  {
+    "createdAt": 2017-09-14T08:24:48.000Z,
+    "hash": "f92a182b5e2f092990c892340488a896793791f2",
+    "message": "Defining second testcase, changed unfitting names of methods",
+  },
+  {
+    "createdAt": 2017-09-13T13:38:55.000Z,
+    "hash": "a6f744f4a5f9a91c7f947793401bae5ae3c141e1",
+    "message": "bugfix",
+  },
+  {
+    "createdAt": 2017-09-12T20:42:26.000Z,
+    "hash": "4b7578dac282b96339b7f3e15008d55a0edb3801",
+    "message": "Bugfixes",
+  },
+  {
+    "createdAt": 2017-09-11T17:17:04.000Z,
+    "hash": "ece4041396a7b237b46427f0d1ef579003b56b29",
+    "message": "bug fix",
+  },
+  {
+    "createdAt": 2017-09-08T22:04:47.000Z,
+    "hash": "2783a55fdf5134bf42e7a08a2a8374df6a19b2a1",
+    "message": "Implemented Getter for the results",
+  },
+  {
+    "createdAt": 2017-09-07T14:46:42.000Z,
+    "hash": "7a94e8b60dc231172d52ca9ed02449c7146fde69",
+    "message": "changed the setup for the experiments inside the consolidationcontroller",
+  },
+  {
+    "createdAt": 2017-09-06T13:18:49.000Z,
+    "hash": "53c138310bfc3abe7ce1f75f939677ad0ccb60b7",
+    "message": "properties are now correctly saved after changes",
+  },
+  {
+    "createdAt": 2017-09-06T07:25:35.000Z,
+    "hash": "34e3276f5f167734ace797fa63cabbb4a1dd8070",
+    "message": "changed consolidationcontroller",
+  },
+  {
+    "createdAt": 2017-09-05T16:30:58.000Z,
+    "hash": "4459caef4cbfc134bd782ef596a17c8edc2e05c0",
+    "message": "results can now be saved inside a csv file",
+  },
+  {
+    "createdAt": 2017-09-05T08:43:40.000Z,
+    "hash": "06bcd927a25a3d28133814b21ae0a383b573aac4",
+    "message": "changes to properties and consolidators",
+  },
+  {
+    "createdAt": 2017-08-26T14:38:26.000Z,
+    "hash": "17a402e3c569d0808102e5e87f135500ff53b5f5",
+    "message": "Added comments in the ConsolidationController",
+  },
+  {
+    "createdAt": 2017-08-26T13:41:11.000Z,
+    "hash": "e1e3e64f9ab30d22a298f87ab38f68c4e328512b",
+    "message": "Consolidators now read the properties file to set the constant values",
+  },
+  {
+    "createdAt": 2017-08-25T12:50:32.000Z,
+    "hash": "d5f17dc547eda1bc116a04ae646b2534fbf49264",
+    "message": "First try of a ConsolidationController",
+  },
+  {
+    "createdAt": 2017-08-22T14:48:03.000Z,
+    "hash": "a672c518f9113debda01f2456e8837334143d7f8",
+    "message": "commented non compiling code out",
+  },
+  {
+    "createdAt": 2017-08-22T14:40:22.000Z,
+    "hash": "0d82b3b62813a7c8737167e8a36a3630beb6eac9",
+    "message": "Corrected comments of the pso classes.",
+  },
+  {
+    "createdAt": 2017-08-22T10:52:39.000Z,
+    "hash": "f027efb4da70cb30cf30b72900af557e5c6f8e25",
+    "message": "Comments on methods etc",
+  },
+  {
+    "createdAt": 2017-08-20T22:35:30.000Z,
+    "hash": "d6630760614b3ff68dd872910a965549c45b43cb",
+    "message": "Use upper threshold to determine over-utilization of PMs",
+  },
+  {
+    "createdAt": 2017-08-20T22:12:42.000Z,
+    "hash": "238d259aa2f13ad301dd793793cdf6e642d304d5",
+    "message": "Merge branch 'master' of https://github.com/RenePonto/dissect-cf",
+  },
+  {
+    "createdAt": 2017-08-20T22:02:30.000Z,
+    "hash": "24a2519dc0e774b1dd6b73c724190992dac36418",
+    "message": "ABC (artificial bee colony) consolidator",
+  },
+  {
+    "createdAt": 2017-08-20T17:20:12.000Z,
+    "hash": "2d0cf6ba06abf114ddc202c93a2acebe92bc0392",
+    "message": "Fixed bug in PSO, added additional test cases",
+  },
+  {
+    "createdAt": 2017-08-20T15:08:13.000Z,
+    "hash": "58b27c73c02fcfb859c44d41701696e8e6efd434",
+    "message": "Fitness class is now used in the PSO (but new bug now, will be fixed)",
+  },
+  {
+    "createdAt": 2017-08-20T13:39:41.000Z,
+    "hash": "302578c8a78ad24b7e389c3ca638669a68a17b6e",
+    "message": "PSO is now running, updated ToDo, implemented further test cases",
+  },
+  {
+    "createdAt": 2017-08-19T15:29:37.000Z,
+    "hash": "d6938d90a1b023749c5046f1f14fdbad3d5d0424",
+    "message": "Merge branch 'master' of https://github.com/RenePonto/dissect-cf",
+  },
+  {
+    "createdAt": 2017-08-19T15:22:41.000Z,
+    "hash": "5f687d23839a8e3943908c273832e21898a13fc3",
+    "message": "Refactoring the classes Solution and Fitness",
+  },
+  {
+    "createdAt": 2017-08-19T12:01:24.000Z,
+    "hash": "8154994fac577ca746375b88e11726f97f630b7c",
+    "message": "Changes to PSO",
+  },
+  {
+    "createdAt": 2017-08-19T11:51:06.000Z,
+    "hash": "d4678f362f3274cd1b558a43c86598023e827ca2",
+    "message": "Changes in the PSO classes, bugfixing",
+  },
+  {
+    "createdAt": 2017-08-17T19:30:02.000Z,
+    "hash": "ffda1d5a9738e8e9a450d4da25ab213927c5a720",
+    "message": "Removed accent of author's name and improved PSO, update todo",
+  },
+  {
+    "createdAt": 2017-08-16T18:41:58.000Z,
+    "hash": "922d08e70473897d55fb46e25fd717a3865e5609",
+    "message": "Update ToDo.txt",
+  },
+  {
+    "createdAt": 2017-08-16T18:38:09.000Z,
+    "hash": "110327cd2d66db74a753dc065168f8ac44d2f87e",
+    "message": "Improved PSO and implemented first try of vmallocmultitenant",
+  },
+  {
+    "createdAt": 2017-08-14T07:25:01.000Z,
+    "hash": "adb66a5499a4dadcc0f60f7f73b5d6c6cb242f0a",
+    "message": "Implemented PSO and changes to some classes",
+  },
+  {
+    "createdAt": 2017-07-29T11:45:41.000Z,
+    "hash": "bb10dc5d84486fdf6c9473dff1ee3dd5b9982441",
+    "message": "GaConsolidator: genetic algorithm for VM consolidation",
+  },
+  {
+    "createdAt": 2017-07-28T16:53:12.000Z,
+    "hash": "c7de9af10a9062f4cb8918599726614ea7275780",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-27T11:01:27.000Z,
+    "hash": "a196650f8c0ab671e236f7a14628525a99a83bda",
+    "message": "Bugfix and comments",
+  },
+  {
+    "createdAt": 2017-07-25T20:42:40.000Z,
+    "hash": "4c79bd6293509e2152c59dbf9340ce00623cbba9",
+    "message": "Bugfix",
+  },
+  {
+    "createdAt": 2017-07-24T14:47:57.000Z,
+    "hash": "605e04dcf32d1532eaa6773d8b4d0439c4a6366d",
+    "message": "Update ToDo.txt",
+  },
+  {
+    "createdAt": 2017-07-24T14:43:45.000Z,
+    "hash": "6133f13b46a11cba0f2b40b33df401d9a81340c7",
+    "message": "Merge branch 'master' of https://github.com/kecskemeti/dissect-cf.git",
+  },
+  {
+    "createdAt": 2017-07-24T14:40:58.000Z,
+    "hash": "e36a4e7ae20e955c3e19dc4a6404b67ec3e52cc9",
+    "message": "Merging",
+  },
+  {
+    "createdAt": 2017-07-24T14:35:24.000Z,
+    "hash": "4d6903e53b4a5f2a105085f6058efb054cc38784",
+    "message": "Merge branch 'master' of https://github.com/RenePonto/dissect-cf.git",
+  },
+  {
+    "createdAt": 2017-07-24T14:31:00.000Z,
+    "hash": "fcec2917b66164ad0d2705675a5a9f45ec2521f5",
+    "message": "Merge remote-tracking branch 'origin/master'",
+  },
+  {
+    "createdAt": 2017-07-24T14:20:32.000Z,
+    "hash": "5b056e3057dc2129cf6468a75eec39c6e5224a2e",
+    "message": "Added Julians work and changes",
+  },
+  {
+    "createdAt": 2017-07-24T14:17:59.000Z,
+    "hash": "60272f18a4d6ca6a8be6656a2cb2cd13b4851408",
+    "message": "Now Julians work is also in the repository, changed a few comments and added additional test, progressed with pso algorithm",
+  },
+  {
+    "createdAt": 2017-07-23T15:55:22.000Z,
+    "hash": "b530d3c70d1e1b7e07b17cd8c8cb26521497ff70",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-23T15:53:40.000Z,
+    "hash": "495111268a86027e2584a0799f04bd2c3ef94b84",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-23T04:02:41.000Z,
+    "hash": "8d043e9a995ae846b5f5df6f725b8aec3d4dfb2d",
+    "message": "Refactoring to better segregate the responsibilities of the classes related to VM consolidation",
+  },
+  {
+    "createdAt": 2017-07-22T20:32:54.000Z,
+    "hash": "2f2050b1fd2ea56d24f53cf26c2c0ed1e96e550a",
+    "message": "Update ToDo.txt",
+  },
+  {
+    "createdAt": 2017-07-22T20:27:21.000Z,
+    "hash": "c959ae487e19990e681b7149a63372a5f4c8e63b",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-22T20:26:15.000Z,
+    "hash": "dad56d5fbf8217d81f29585ed0c03c50a376cd29",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-20T09:15:41.000Z,
+    "hash": "2c89545c1c40c2c1bc6c85c72e42e08fdbf6a0da",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-20T09:14:46.000Z,
+    "hash": "4f2a6706317d0a50a7b5c69efd45eef4687ef9bf",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-19T22:41:47.000Z,
+    "hash": "d10037fff752d8546bdb51f8252fc2e587f88a83",
+    "message": "NetworkNode level power is now connected to network node level states",
+  },
+  {
+    "createdAt": 2017-07-19T15:08:18.000Z,
+    "hash": "54e61a5b7754fee9e3df84206b16206aff1732f2",
+    "message": "Started transitioning the power state maintenance to network node",
+  },
+  {
+    "createdAt": 2017-07-19T14:57:51.000Z,
+    "hash": "60c917ed73c80f984fa8beca7b74a3cb887244c9",
+    "message": "Update ToDo.txt",
+  },
+  {
+    "createdAt": 2017-07-19T14:57:14.000Z,
+    "hash": "664030231952e78778fef24437740346d9b9177e",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-19T14:56:01.000Z,
+    "hash": "302a5787d1ca6bfa359c3e9fcbf6ac35956b18c3",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-19T14:54:50.000Z,
+    "hash": "a1bcb509b9ac5390b95c633371a1afb72a481621",
+    "message": "Update ToDo.txt",
+  },
+  {
+    "createdAt": 2017-07-18T15:52:40.000Z,
+    "hash": "53f0f76be82928c19cdac4ac823904fc89c9a32b",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-18T15:49:35.000Z,
+    "hash": "b465f3f0350d2ee34e460d68aaf147119b71932e",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-18T15:43:07.000Z,
+    "hash": "a7f1a127e286b7224bc25a19f4d38e4a774b3332",
+    "message": "merging",
+  },
+  {
+    "createdAt": 2017-07-18T15:36:36.000Z,
+    "hash": "e7b9e56b4c0c826e38b9090c046fe59f886577c1",
+    "message": "Commit first PSO things and bugfixes",
+  },
+  {
+    "createdAt": 2017-07-18T12:49:26.000Z,
+    "hash": "cc52a86147c7547ef546ec2b65b460a17c627775",
+    "message": "Update ToDo.txt",
+  },
+  {
+    "createdAt": 2017-07-17T19:18:42.000Z,
+    "hash": "211d5256f57f5f067e8b67ea0b7b1e4df8c2830e",
+    "message": "Bugfix",
+  },
+  {
+    "createdAt": 2017-07-17T14:48:32.000Z,
+    "hash": "4fe6c317af3152865ff4ad25e0946e13f39b77ad",
+    "message": "Update ToDo.txt",
+  },
+  {
+    "createdAt": 2017-07-17T14:47:24.000Z,
+    "hash": "f552a5de33a8e97cae8e315c75b6128faf8814a2",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-17T14:46:40.000Z,
+    "hash": "41d1fe3d8bbf3255d880281ffbdbb7f7e79c0bef",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-17T10:58:42.000Z,
+    "hash": "19dc3db2bfda348cb76796d6235b27200e21d8e2",
+    "message": "Add Julians Changes",
+  },
+  {
+    "createdAt": 2017-07-17T10:58:02.000Z,
+    "hash": "32b60b7bf7efb19b1e1a28de4553bcda8beb3049",
+    "message": "Add Julians Changes",
+  },
+  {
+    "createdAt": 2017-07-16T16:01:18.000Z,
+    "hash": "03fb072a2abfe131b3acf55c59549f80eda4e25e",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-16T15:50:54.000Z,
+    "hash": "b8dcce0c0c709212723db04feb44358ec1862a17",
+    "message": "Merge branch 'master' of https://github.com/RenePonto/dissect-cf",
+  },
+  {
+    "createdAt": 2017-07-16T15:12:08.000Z,
+    "hash": "0fd85d121ff6565ded82d718a111616ae46c06e1",
+    "message": "Merge remote-tracking branch 'upstream/master'",
+  },
+  {
+    "createdAt": 2017-07-14T12:43:53.000Z,
+    "hash": "47858484c1f9706750ba04256efa1b0a906f77bd",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-13T23:14:41.000Z,
+    "hash": "cfd203fd6ce4edfca9ff5764c4c89d362c4d2573",
+    "message": "Bugfixes",
+  },
+  {
+    "createdAt": 2017-07-12T16:39:03.000Z,
+    "hash": "1e71b22355a6655f8b581eb853373194b6201063",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-12T16:38:05.000Z,
+    "hash": "08a7dcdfaec92e9d1f6061ad7ed1d227ae0d1fc0",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-11T19:19:04.000Z,
+    "hash": "e5b1eadc1351384be9725fdb0b44e98e5be62820",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-11T19:18:52.000Z,
+    "hash": "395747e397137e59ed218de0b8631a8a4ed4a01b",
+    "message": "Delete EmptyScheduler.java",
+  },
+  {
+    "createdAt": 2017-07-11T19:18:31.000Z,
+    "hash": "501a11142dfafb0c43662a0fd6bf7dca82eaa87f",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-11T19:18:04.000Z,
+    "hash": "034d9170cb9900e4e875030a4dbedb85bef880c0",
+    "message": "Delete Consolidator.java",
+  },
+  {
+    "createdAt": 2017-07-11T19:16:58.000Z,
+    "hash": "4b6298c40296495dad57d270575523bdf1d26eb9",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-11T09:06:04.000Z,
+    "hash": "d2775725c946055ff3a47742c819149baff38d4c",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-11T09:05:24.000Z,
+    "hash": "73fae6848994069b8c19ceeecd738a6fa93b577a",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-09T10:38:44.000Z,
+    "hash": "6abe71b543ce1faf04ac0287ba0cb4ddb7b5621f",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-05T14:14:34.000Z,
+    "hash": "2bdceb99e8ef709d50e35f2f05f5403effe420ea",
+    "message": "Increasing test coverage for MonitorConsumption and RandomScheduler",
+  },
+  {
+    "createdAt": 2017-07-05T12:45:51.000Z,
+    "hash": "571a16cbdf3e4ce77204e3c8223c3e8262daeb4d",
+    "message": "Simplification of VM, RC + bugfix for PM",
+  },
+  {
+    "createdAt": 2017-07-04T23:30:21.000Z,
+    "hash": "ebddfd37a712ee97aec134ca61ff8dc8218f1282",
+    "message": "Fixes for the previously broken tests, removed the obsolete ones",
+  },
+  {
+    "createdAt": 2017-07-04T23:09:17.000Z,
+    "hash": "3821499cf1880539810e41e5ff5455a6fe1572ef",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-04T23:06:42.000Z,
+    "hash": "39fe2aaf145383e67be1f8590a2eb43896df3d87",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-04T16:14:07.000Z,
+    "hash": "00c136da86dcb39e220ce9d9a3602d0342b10bfd",
+    "message": "Work in progress refactoring of VM Migration",
+  },
+  {
+    "createdAt": 2017-07-04T14:42:32.000Z,
+    "hash": "a9fc7a8c57f831742480343f31b9e68850035b87",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-04T14:41:03.000Z,
+    "hash": "494b081b92db48503f5f939012b0613d66826227",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-04T13:03:18.000Z,
+    "hash": "663a7340e03ac1419599e7c37d9cdcd651654f79",
+    "message": "Delete Consolidator.java",
+  },
+  {
+    "createdAt": 2017-07-04T12:21:02.000Z,
+    "hash": "a67dc1300d5cf519eb79682048d27d3aa7db014e",
+    "message": "Delete Bin_PhysicalMachine.java",
+  },
+  {
+    "createdAt": 2017-07-04T12:20:42.000Z,
+    "hash": "4738d1a105fc1bc55e10d734a82d0e1f3aceba78",
+    "message": "Delete Item_VirtualMachine.java",
+  },
+  {
+    "createdAt": 2017-07-04T12:20:22.000Z,
+    "hash": "30a06bea597b34dd565d83fb1590c2de50a1f2b0",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-04T10:42:16.000Z,
+    "hash": "90bca3ec37838204be707965c158bdff68d177f8",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-04T10:27:29.000Z,
+    "hash": "86de3145fbe470b4cede783acce013593d8f9dda",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-04T10:26:42.000Z,
+    "hash": "57725ba4c09bca807229d00a08d702aaba64fb2e",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-07-03T15:09:22.000Z,
+    "hash": "f1d94e5e868112e509d463b9f569bd7990e2ba27",
+    "message": "WWS is now dynamically set based on time",
+  },
+  {
+    "createdAt": 2017-07-03T14:45:57.000Z,
+    "hash": "578ee35ee987a6d858dffd11c931e22e31672dfd",
+    "message": "Page level details are removed.",
+  },
+  {
+    "createdAt": 2017-06-29T23:03:39.000Z,
+    "hash": "f5dca1f9fb053489631b73b779443330ed48a8d2",
+    "message": "AlterableRCs do additions/subtractions in line with multiplication",
+  },
+  {
+    "createdAt": 2017-06-28T21:47:45.000Z,
+    "hash": "9aa14c4d62d431d78a14a28512509794351c4d41",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-28T21:46:46.000Z,
+    "hash": "ee43aaceacef76d36aff7af195f1b62a140010d4",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-28T16:29:49.000Z,
+    "hash": "b7cbd2f4b705c0bc45f2a3bd02c744cdba355b91",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-28T16:29:27.000Z,
+    "hash": "147db2d0dee8407ff6ffd79c3b92b2fab5df750f",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-28T06:24:38.000Z,
+    "hash": "8f04b64468edb6866509a324cbb188b4a3c5a285",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-28T06:23:47.000Z,
+    "hash": "08db6720854ac04eea4ead0b5aac1be379ee3b26",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-28T06:23:25.000Z,
+    "hash": "01af96b80a7532a705d9deba24edc9d46d81d46b",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-27T15:24:00.000Z,
+    "hash": "e3fe0c4a28da62216c971fab7e390fa2596a4a62",
+    "message": "Proper cancellation of resource allocations used with aborted migration",
+  },
+  {
+    "createdAt": 2017-06-26T14:42:24.000Z,
+    "hash": "5cc85b9a77ed322382f83dbda916b5701e56d498",
+    "message": "Bugfixes around resource consumption suspension",
+  },
+  {
+    "createdAt": 2017-06-26T12:53:05.000Z,
+    "hash": "acc3d862e8489ee07fe65ab9fcde0ccf5741080c",
+    "message": "Allow VM destroy even if it is in one of the transferring states",
+  },
+  {
+    "createdAt": 2017-06-26T07:53:45.000Z,
+    "hash": "d14d1d5e7fb41388057027e61f2dd660d201abe3",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-26T07:53:00.000Z,
+    "hash": "5e90c1cc988aaac03101737694b359570327f032",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-25T10:49:54.000Z,
+    "hash": "07499e1d6ec2dc39c04fb1495381ec52ca116853",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-25T10:49:24.000Z,
+    "hash": "85018536654b0926b274e4a858a8472d25ea5e49",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-23T14:19:14.000Z,
+    "hash": "fe124be6f9e48db10c23c35681e52ddf1ab27fa7",
+    "message": "New feature: allow cancellation of storage operations",
+  },
+  {
+    "createdAt": 2017-06-23T13:02:27.000Z,
+    "hash": "e95ac1eab5614c8770ed36d8adc3368cd2293b69",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-23T13:01:30.000Z,
+    "hash": "860aa11a3c1b34c2f1b90a41048ab4beb0eb70d2",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-23T12:51:53.000Z,
+    "hash": "120cf676b0693bc4be022b2cd63df213836dcf13",
+    "message": "Bugfix: Allow immediate revert for a PM switchoff decision",
+  },
+  {
+    "createdAt": 2017-06-20T18:49:56.000Z,
+    "hash": "f3118f966260ed84ae251f71a671b0bcfd047f0b",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-20T18:49:18.000Z,
+    "hash": "da34e1e11a6f7297ded109d8e267922229387082",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-20T14:28:20.000Z,
+    "hash": "923e5ef383fa9aafd84ad5d0f465fd2309adb894",
+    "message": "Resource allocations are kept for longer in case of migration",
+  },
+  {
+    "createdAt": 2017-06-20T09:50:00.000Z,
+    "hash": "5e64938e00a8a2e106849d06f97686572fdfd417",
+    "message": "Fix for a rarely occurring bug found in first fit's implementation",
+  },
+  {
+    "createdAt": 2017-06-19T16:34:05.000Z,
+    "hash": "6329049a35972510d97fbfb7414ba979928f3104",
+    "message": "Delete VMConsolidation_base.java",
+  },
+  {
+    "createdAt": 2017-06-19T16:33:54.000Z,
+    "hash": "9d5c177a5bcfec0e77c755df8db9fe91a44326f0",
+    "message": "Delete StartNode.java",
+  },
+  {
+    "createdAt": 2017-06-19T16:33:45.000Z,
+    "hash": "f6a974dce77bbecd5a7b170f233ee712e347cb7e",
+    "message": "Delete ShutDownNode.java",
+  },
+  {
+    "createdAt": 2017-06-19T16:33:32.000Z,
+    "hash": "946c50ca78093b8c2c735cfff1915c0c5c939ab1",
+    "message": "Delete Node.java",
+  },
+  {
+    "createdAt": 2017-06-19T16:31:20.000Z,
+    "hash": "f6c843e6e43bb5b145a591123d5f4d5762e5bd18",
+    "message": "Delete MigrateVMNode.java",
+  },
+  {
+    "createdAt": 2017-06-19T16:30:46.000Z,
+    "hash": "eaffd59d3e22d518184e3997fa423bc066d80207",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-19T16:29:10.000Z,
+    "hash": "4e6197e17d98c4d0208df35f0e8eb4b4dce9024a",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-19T07:08:11.000Z,
+    "hash": "894d1e6a1b63c3ac1ae5c9527846540cc29cf480",
+    "message": "Merge branch 'master' of git@github.com:kecskemeti/dissect-cf.git",
+  },
+  {
+    "createdAt": 2017-06-19T07:06:42.000Z,
+    "hash": "d74f300f19e746fc04142982b62185a28098184c",
+    "message": "Bugfix on state dependent event handling",
+  },
+  {
+    "createdAt": 2017-06-16T16:01:45.000Z,
+    "hash": "932643ecc1c5aa0e32d932f9cc70053379f848b3",
+    "message": "Initial merge from Vincenzo's NEWBRANCH and migration branches",
+  },
+  {
+    "createdAt": 2017-06-12T14:57:06.000Z,
+    "hash": "9dce0f10e4bcc6f14fe0f28e5c890557a0ba8ab6",
+    "message": "Introduction of workload consolidation constructs",
+  },
+  {
+    "createdAt": 2017-06-12T14:53:36.000Z,
+    "hash": "637926222144cc0548cb933ebd6a4e18ef6fb9eb",
+    "message": "Minimal cleanup for speed and readability",
+  },
+  {
+    "createdAt": 2017-06-11T21:19:29.000Z,
+    "hash": "4344307ec818c1c76c0ab01a5c9e70f041d2f850",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-10T16:43:58.000Z,
+    "hash": "839f199aa5137beb400c60614d5f3435df1b9f15",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-07T16:19:32.000Z,
+    "hash": "1e2ca5123db565129c3bfdb9e2d747d2cbd94787",
+    "message": "Delete Optimizer.java",
+  },
+  {
+    "createdAt": 2017-06-07T16:18:46.000Z,
+    "hash": "b0a392c1838ca9fbd555678e9e74436c373e4862",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-06T21:30:21.000Z,
+    "hash": "7d67eaf03d928d4115696818952aa27af8a22a81",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-06-06T21:18:37.000Z,
+    "hash": "b0ef01932b5567899dc4adb1380f3e1369cc02b6",
+    "message": "Add files via upload",
+  },
+  {
+    "createdAt": 2017-05-10T11:20:30.000Z,
+    "hash": "1dc6473f5ac1ce08fd636ae9b8648b45b19da62c",
+    "message": "Minor memory optimisation for Queueing data",
+  },
+  {
+    "createdAt": 2017-05-09T11:00:08.000Z,
+    "hash": "9f8acaca9cf54d2c84be1e284958656937824655",
+    "message": "Completely merged comparator for timed",
+  },
+  {
+    "createdAt": 2017-02-16T23:07:23.000Z,
+    "hash": "db8e8bd2d3034ebc479856a5898f3ba7f8b65b08",
+    "message": "A new more stable comparator for resource constraints.",
+  },
+  {
+    "createdAt": 2016-08-25T16:28:04.000Z,
+    "hash": "932f09d5e0d122f0bfe691c0fc87c9c7fc2d1557",
+    "message": "Fixes an error which previously allowed negative sized SOs and RCs",
+  },
+  {
+    "createdAt": 2016-08-17T16:37:54.000Z,
+    "hash": "d69296690dc9a7ba955c18816d9bfda084ad7db7",
+    "message": "Notification management and MultiPMController fixes",
+  },
+  {
+    "createdAt": 2016-08-12T16:01:30.000Z,
+    "hash": "c786c2c6c66abb651dee55aec0df8c0fc20a174d",
+    "message": "A few memory related tweaks",
+  },
+  {
+    "createdAt": 2016-08-12T13:55:56.000Z,
+    "hash": "3797b2aa4522486260fad89c4fcbc397c9531a08",
+    "message": "Improved compare performance on Timed",
+  },
+  {
+    "createdAt": 2016-08-12T13:16:50.000Z,
+    "hash": "dda74945b61610facf222fe4c2b1481f42c1e492",
+    "message": "StateDependentEventHandlers now only keep changelists when necessary",
+  },
+  {
+    "createdAt": 2016-08-12T11:41:37.000Z,
+    "hash": "33b6991711d0394296ef2f345bc86697ebe153b9",
+    "message": "An arraylist is no longer needed (only if suspended tasks are stored)",
+  },
+  {
+    "createdAt": 2016-08-12T11:06:05.000Z,
+    "hash": "b1002ed4ff65be28012ded44f20f66b113e1ae59",
+    "message": "Added current author info",
+  },
+  {
+    "createdAt": 2016-08-12T11:03:08.000Z,
+    "hash": "6c9191a7b007b34fc4576b2a1bce0fc70a31d1dd",
+    "message": "Merge branch 'master' of git@github.com:kecskemeti/dissect-cf.git",
+  },
+  {
+    "createdAt": 2016-08-12T11:02:41.000Z,
+    "hash": "58df825f5cd5c20a3c49db319189a1c2b0af03d3",
+    "message": "Removing a list from StaeDependentEventHandler for improved memory",
+  },
+  {
+    "createdAt": 2016-08-11T08:37:31.000Z,
+    "hash": "c2769060e9eaf3a51662c98538c6e9535252c268",
+    "message": "link to jprofiler",
+  },
+  {
+    "createdAt": 2016-04-14T09:42:58.000Z,
+    "hash": "279e8cfcc9401ec34732a3b8a1fb81fea5d943af",
+    "message": "Merge branch 'SingletonNotifHandlers'",
+  },
+  {
+    "createdAt": 2016-03-08T18:19:02.000Z,
+    "hash": "f1ea64f88420827c72e5dd166a02ed393382fc30",
+    "message": "Dispatch loop handling update",
+  },
+  {
+    "createdAt": 2016-03-08T08:12:29.000Z,
+    "hash": "006e4891b67f847d4b74e4f85d9d84e049e07ea0",
+    "message": "SingletonHandlers",
+  },
+  {
+    "createdAt": 2015-12-23T12:12:36.000Z,
+    "hash": "6a7c85740e70264caf5b539fc9a7475fbc077f8b",
+    "message": "Reference to dcf-exercises",
+  },
+  {
+    "createdAt": 2015-12-03T09:41:52.000Z,
+    "hash": "06dce77d8768463ba20c8bed9d7c1f49237bb168",
+    "message": "Fixes for javadoc compilation warnings.",
+  },
+  {
+    "createdAt": 2015-12-03T09:24:25.000Z,
+    "hash": "eebd9d6b622df64865a8036ed5d04511f2050137",
+    "message": "Final piece of documentation on PM Iterators.",
+  },
+  {
+    "createdAt": 2015-12-02T22:29:45.000Z,
+    "hash": "a9491be27d76f57e80ee2a9ee412583f4de6d28b",
+    "message": "Documentation for VM schedulers.",
+  },
+  {
+    "createdAt": 2015-12-02T10:59:33.000Z,
+    "hash": "4edbe92ffbf9c5ae975dbd8609109272fb7969b6",
+    "message": "Documentation for the Unified Resource Sharing Model.",
+  },
+  {
+    "createdAt": 2015-11-04T22:10:28.000Z,
+    "hash": "87716fdc8780df6847933be489c6418389f62c96",
+    "message": "Additional documentation on pm schedulers and state notificaitons",
+  },
+  {
+    "createdAt": 2015-11-04T09:55:58.000Z,
+    "hash": "9d666290996a0a7430cd68f3af4af9587614a67e",
+    "message": "Merge branch 'master' of git@github.com:kecskemeti/dissect-cf.git",
+  },
+  {
+    "createdAt": 2015-11-04T09:55:51.000Z,
+    "hash": "8be5e7412eaa28837200e509e25b1e1433bce144",
+    "message": "A few more lines of documentation clarifying the util, notifications and io packages.",
+  },
+  {
+    "createdAt": 2015-10-29T22:43:19.000Z,
+    "hash": "5810e42f8163fe60889dc4f98e4cb41eb1cc315e",
+    "message": "Even further documentation now reaching over ResourceConstraints.",
+  },
+  {
+    "createdAt": 2015-10-29T14:11:03.000Z,
+    "hash": "61f7b435b841ecd9187f6f1b51d56ae1f8e6444e",
+    "message": "Complete documentation on vm",
+  },
+  {
+    "createdAt": 2015-10-29T11:44:30.000Z,
+    "hash": "8be2cfeee33a4415a3a2b252fb8df8049ae261da",
+    "message": "Further documentation added.",
+  },
+  {
+    "createdAt": 2015-10-25T20:53:37.000Z,
+    "hash": "a3ced9a3aec1f1b83589a0f71bac405150c0171b",
+    "message": "Adding some basic documentation",
+  },
+  {
+    "createdAt": 2015-10-24T13:06:09.000Z,
+    "hash": "8f5e1f3b0e2a87a549645d99862ea20cf00fc944",
+    "message": "Bugfixes in IaaS and PM",
+  },
+  {
+    "createdAt": 2015-09-21T14:16:43.000Z,
+    "hash": "2ef3ec4a050078516d43090fcad725eca0911f7a",
+    "message": "Some documentation for VAs and SOs.",
+  },
+  {
+    "createdAt": 2015-09-21T13:22:15.000Z,
+    "hash": "c04979dfb2d64d18c7ea9f0800bb68912bc169cc",
+    "message": "Bugfix: The registration of an already running PM was improperly handled by the IaaSService",
+  },
+  {
+    "createdAt": 2015-09-20T20:31:35.000Z,
+    "hash": "e681b4a06f0882f009791fb544844137e4e810f0",
+    "message": "PM deregistration is now propagated in SchedulingDependentMachines.",
+  },
+  {
+    "createdAt": 2015-09-20T19:58:25.000Z,
+    "hash": "9bb03b212f73ab57ef23a9ed5fbf04baccd1d3be",
+    "message": "Allowing the subclassing of the IaaSService.",
+  },
+  {
+    "createdAt": 2015-08-17T08:54:20.000Z,
+    "hash": "aebeeba2c2fef0d1565324d066614734aad38e90",
+    "message": "Moving on to the development of 0.9.7",
+  },
+  {
+    "createdAt": 2015-08-11T19:39:01.000Z,
+    "hash": "98616e5d1ecd60dfa2aa94bc302de127b2746311",
+    "message": "Merge branch 'master' of git@github.com:kecskemeti/dissect-cf.git",
+  },
+  {
+    "createdAt": 2015-08-11T13:41:56.000Z,
+    "hash": "46a21669df9b3f984bee32d6f709aa45e8392c15",
+    "message": "Bugfix: Upon PM addition the Scheduler was calling scheduleQueued unnecessarily",
+  },
+  {
+    "createdAt": 2015-08-10T05:36:43.000Z,
+    "hash": "c4a3a322d2078bbce683deb691dc46e374711d75",
+    "message": "Eliminating a few unnecessary references and objects around VMs",
+  },
+  {
+    "createdAt": 2015-08-07T12:27:05.000Z,
+    "hash": "be0760d8c49eed40dd72ff40c14ed7223752e7bf",
+    "message": "Cleanup of a few possible memory leaks",
+  },
+  {
+    "createdAt": 2015-08-07T09:06:37.000Z,
+    "hash": "951d79aa108cb8b361bdf6baa243c16eee275050",
+    "message": "New, generic, state dependent event handling mechanism. Alterable resource consumptions now support adding on several ways for increased performance.",
+  },
+  {
+    "createdAt": 2015-07-31T14:05:09.000Z,
+    "hash": "1f542516c923f17021767ab890d2eab9f3322a07",
+    "message": "Bugfix: corrected first fit scheduler's minimum free resources calculation technique.",
+  },
+  {
+    "createdAt": 2015-07-29T19:25:26.000Z,
+    "hash": "3c26d13923a689c94f21fad4d200ee2b7cbd8499",
+    "message": "Bugfix: improper missing resources calculation in FirstFitScheduler",
+  },
+  {
+    "createdAt": 2015-07-29T18:31:47.000Z,
+    "hash": "26f50f32c4f237900696de6bcb819d322389cd5e",
+    "message": "A more performant FirstFit Scheduler",
+  },
+  {
+    "createdAt": 2015-07-28T21:20:41.000Z,
+    "hash": "3120446e1f1863622392b26ba74c84b083ae2773",
+    "message": "Simplifications in the deferred event aggregated handler.",
+  },
+  {
+    "createdAt": 2015-07-28T20:20:29.000Z,
+    "hash": "c75cd3b93f66bfb14fb5835e0559d5a353fbc3dd",
+    "message": "Refactoring of the deferred event to aggregate its subscriptions.",
+  },
+  {
+    "createdAt": 2015-07-27T15:53:02.000Z,
+    "hash": "9e6cbb9279e6372bf619cd4dd0e05294119bbccc",
+    "message": "Fix for a time management bug in Timed.",
+  },
+  {
+    "createdAt": 2015-07-27T15:04:46.000Z,
+    "hash": "28b4006a8cdf33a3c8090c4e245fc9ce2c3a8448",
+    "message": "The GlobalAggregatorConcept is dropped - increased the memory demands too much compared to how much time it saved.",
+  },
+  {
+    "createdAt": 2015-07-24T21:45:13.000Z,
+    "hash": "3f0c2383b4e1ba491ff3f9db3a871ad7e79b124e",
+    "message": "Bugfix: sometimes a floating point error could occur during resource spreading Memory cleanup: FreqSyncer now makes sure it does not maintain references to past grouped ResourceSpreaders. Performance improvement: during the evaluation of the max-min fairness algorithm, the completion distance of every consumption was calculated several times unnecessarily.",
+  },
+  {
+    "createdAt": 2015-07-24T20:25:15.000Z,
+    "hash": "5371aa50677e0228efe6a211082272e85a852ad5",
+    "message": "Fixing a bug in VM scheduling to ensure correct maintenance of free resources in the parent IaaS. Adding a new test for VM scheduling that checks for the maintenance issues.",
+  },
+  {
+    "createdAt": 2015-07-24T20:23:26.000Z,
+    "hash": "781e4316a5b42b677307818926ff6bc85bf49080",
+    "message": "Reintroduction of PM status check in Multi PM controller.",
+  },
+  {
+    "createdAt": 2015-07-20T08:55:27.000Z,
+    "hash": "2efd8f1586e77401dd38c6ba975bab4d6bf4be92",
+    "message": "Bugfix: event skipping for zero frequency timed objects were failing.",
+  },
+  {
+    "createdAt": 2015-07-19T12:45:18.000Z,
+    "hash": "1bce1a6598614aa1120a48ea13942c1dd218ff38",
+    "message": "More intelligent PM scheduling that turns on as many PMs as many are needed to fulfill the currently queues VM requests.",
+  },
+  {
+    "createdAt": 2015-07-18T20:36:30.000Z,
+    "hash": "a9c17d65989eb46b481ebd6dbb416f03bfbecb29",
+    "message": "Eliminating an unnecessary exception",
+  },
+  {
+    "createdAt": 2015-07-18T20:07:11.000Z,
+    "hash": "46f31e99179031841a0d0695369e0a20ed1e0aea",
+    "message": "Propagating the VM's object alongside the VM state change events.",
+  },
+  {
+    "createdAt": 2015-07-18T19:51:52.000Z,
+    "hash": "50b2a9576daa46505363818f636248d00d1d8360",
+    "message": "A few fixes for issues identified by findbugs.",
+  },
+  {
+    "createdAt": 2015-07-18T09:46:59.000Z,
+    "hash": "7edc0c6c5b757c59b9d6cfa79462f5a04482d7cc",
+    "message": "Adding PM's reference to the pm state change events.",
+  },
+  {
+    "createdAt": 2015-07-18T09:07:34.000Z,
+    "hash": "69b83fc883850a63aceb84a8726ee34897028ace",
+    "message": "From now on, the VM scheduler foundation is no longer asking for a new scheduler run without checking first whether the freed up resources seem to suggest we will be able to fulfill some of the queued VMs.",
+  },
+  {
+    "createdAt": 2015-07-18T08:36:28.000Z,
+    "hash": "18cda6779d1b8207509f3a630bb6e857ba2d26f4",
+    "message": "Updated welcome screen to point out runtime library dependencies.",
+  },
+  {
+    "createdAt": 2015-07-18T08:25:03.000Z,
+    "hash": "43e1f6ae832f8312090ae88e6a21bf28b00d15de",
+    "message": "Introducing a suite to detect a cross-test class dependency. Ensuring that during timed reset not even the GlobalAggregatedEventDispatcher maintains its state. Readding some commented out timeouts",
+  },
+  {
+    "createdAt": 2015-07-18T00:09:58.000Z,
+    "hash": "6ef806eec4e75c4d0d03163668ca44311f4e93be",
+    "message": "Promised resource allocations are now collected in an array instead of an ArrayList.",
+  },
+  {
+    "createdAt": 2015-07-17T22:59:19.000Z,
+    "hash": "0b5ecc9e8991ead4b0f803bfd533f59c3a1080af",
+    "message": "switch to linked list based representation of the state switching task list management",
+  },
+  {
+    "createdAt": 2015-07-17T22:46:57.000Z,
+    "hash": "4460601da9071ee391a24c6473a3e6bf9f2e8f19",
+    "message": "Removal of the host member of the resource allocations (by elliminating the static modifier from the class definition)",
+  },
+  {
+    "createdAt": 2015-07-17T13:22:38.000Z,
+    "hash": "e1c80d326dd4d3d8e75b76e29d26caa61b9319ff",
+    "message": "Using trove for primitive arraylists and hashmaps",
+  },
+  {
+    "createdAt": 2015-07-17T10:58:22.000Z,
+    "hash": "57d31a958563c0644ea81ebe834be302e9b5b21b",
+    "message": "Introduction of global event dispatcher - an equivalent to DeferredEvent that proceeds in batches instead of single deferred events.",
+  },
+  {
+    "createdAt": 2015-07-17T09:14:18.000Z,
+    "hash": "2180e77f439e6fb5fa009b0feb8977e6353c069a",
+    "message": "Performance improvement: removal of an unnecessary object creation.",
+  },
+  {
+    "createdAt": 2015-07-17T07:01:55.000Z,
+    "hash": "c0f160569a5b821eb6485247a29aa33c1b13f24a",
+    "message": "Introduction of constant resource constrains (elliminating a need for a new wrapper object) Refactoring the resource constraints to move into their own package",
+  },
+  {
+    "createdAt": 2015-07-16T23:38:49.000Z,
+    "hash": "16c01c0c7207c0c3bea2faa6a1df060f70c978d8",
+    "message": "Resource constraints are not constant anymore.",
+  },
+  {
+    "createdAt": 2015-07-14T20:06:28.000Z,
+    "hash": "41e1c14576cd2f59318c178edd9a001c0ff7d5fc",
+    "message": "Bugfix: PM swithcoff is now executed even if a syncer has not removed the last consumption (but it is already under removal) Bugfix: Before the switchoff can commence, the PM was waiting way too long for the next syncer event.",
+  },
+  {
+    "createdAt": 2015-07-13T23:10:46.000Z,
+    "hash": "0d86deeaaa6c9624b871224806bfa5170f099adb",
+    "message": "Introduction of from/to memory storage operations (i.e. writing to disk from memory, reading from disk to memory) VM related tests now expect the use of the new functionality Reorganizing the imports a little bit",
+  },
+  {
+    "createdAt": 2015-07-11T22:42:19.000Z,
+    "hash": "b1db36b29943cd5a23a892848e387350ebcdb569",
+    "message": "Allowing the direct use of the PMs CPUs Starting to use the container based travis build system",
+  },
+  {
+    "createdAt": 2015-06-24T19:51:33.000Z,
+    "hash": "c755657585a61c72f1563c5beeb3ed5d849808ad",
+    "message": "Reference to the release archive",
+  },
+  {
+    "createdAt": 2015-06-24T19:01:18.000Z,
+    "hash": "4fc3b53701257b1b4a2fb59e3070b1c5e76f5275",
+    "message": "Reference to the documentation site",
+  },
+  {
+    "createdAt": 2015-06-19T21:17:11.000Z,
+    "hash": "ca84dd0bb48d2c8b092263e60d690d8657e9d357",
+    "message": "link to researchgate",
+  },
+  {
+    "createdAt": 2015-06-19T11:43:57.000Z,
+    "hash": "a23e2470d64b52a74d3d09cd07f6faffbc132a65",
+    "message": "Reference to FAQ",
+  },
+  {
+    "createdAt": 2015-06-13T12:50:00.000Z,
+    "hash": "50b0be81001d2796b5941dba571791e2db85d47e",
+    "message": "Cloudloader test now can last for 400ms.",
+  },
+  {
+    "createdAt": 2015-06-13T12:27:35.000Z,
+    "hash": "8d206bbfe5b8c6a37ba9e1b99b55217c0547dcc3",
+    "message": "travis build badge",
+  },
+  {
+    "createdAt": 2015-06-13T12:11:37.000Z,
+    "hash": "333a20fe3679fdcef584afc119513afb7bd7eea2",
+    "message": "New test for cloud loader.",
+  },
+  {
+    "createdAt": 2015-06-13T10:18:02.000Z,
+    "hash": "7689432feb4773ba86a18c1bd7d21d3b0497fc50",
+    "message": "Refactoring for specialized Energy meters, implementing the IaaSEnergymeter as an aggregation over the PM Meters of all IaaSService controlled machines. increased some timeouts in order to have better chances of passing travis.",
+  },
+  {
+    "createdAt": 2015-06-12T21:46:45.000Z,
+    "hash": "438b75081ef2867c4b36850e6c3f769b772622b0",
+    "message": "Allows the query of VMs which are still in the queue with the same IaaS interface that was previously only restricted to VMs already placed on one of the PMs.",
+  },
+  {
+    "createdAt": 2015-06-12T16:38:49.000Z,
+    "hash": "4e1c0ca789e4c7612fec6166510dd71db2e25b79",
+    "message": "Allowing the termination of queued VM requests",
+  },
+  {
+    "createdAt": 2015-06-12T12:40:23.000Z,
+    "hash": "8cded90257c7816e10f6220a64c7b86c64e9c06f",
+    "message": "Added gitignore",
+  },
+  {
+    "createdAt": 2015-06-12T09:20:38.000Z,
+    "hash": "9ee7bdbc7aaece50433367af580a652452ae42ed",
+    "message": "Update README.md",
+  },
+  {
+    "createdAt": 2015-06-11T21:49:10.000Z,
+    "hash": "4289a17fc4068932f850b5a1cef3615706f8d3e8",
+    "message": "Update README.md",
+  },
+  {
+    "createdAt": 2015-06-11T21:46:54.000Z,
+    "hash": "ff1dc25b8c4393320bd395db7dc09369d48bc8d1",
+    "message": "Update README.md",
+  },
+  {
+    "createdAt": 2015-06-11T21:36:53.000Z,
+    "hash": "31fef5635d5a79e4822ffcf97d4fb2446f255fe6",
+    "message": "reference to dissect-cf-examples",
+  },
+  {
+    "createdAt": 2015-05-27T21:41:11.000Z,
+    "hash": "833113df807c6b2116cbe260d3e744c0a5bf4796",
+    "message": "VM scheduling refactoring and minor performance improvements, fixed a bug in resource spreader",
+  },
+  {
+    "createdAt": 2015-04-18T20:58:22.000Z,
+    "hash": "8d6beb541bd2b1599ca841bbb3b930ca4a057093",
+    "message": "Basic user guide added in the readme",
+  },
+  {
+    "createdAt": 2015-01-20T14:16:20.000Z,
+    "hash": "3196c3a1ad37edfe644996f069f909c51a0648a3",
+    "message": "Added a warning",
+  },
+  {
+    "createdAt": 2015-01-20T13:55:03.000Z,
+    "hash": "c3640a9e5ef4fb632f49e7bf2bdc815dfa1394a0",
+    "message": "Merge branch '0.9.5'",
+  },
+  {
+    "createdAt": 2015-01-20T12:09:58.000Z,
+    "hash": "ba5c01382d05f2d6a08f23a271c9957a01d7b72a",
+    "message": "Ensuring javadoc is produced if needed",
+  },
+  {
+    "createdAt": 2015-01-20T11:37:28.000Z,
+    "hash": "22f496861647653b44b41fa3392b2de07b88cb5a",
+    "message": "Update README.md",
+  },
+  {
+    "createdAt": 2015-01-20T11:18:14.000Z,
+    "hash": "25ce1467f35b3851df94e8a833120da6dbf132b4",
+    "message": "Start of the development for 0.9.6",
+  },
+  {
+    "createdAt": 2015-01-20T11:15:22.000Z,
+    "hash": "3e6b545207c2fe9099e98d6b2b25682256d72f8d",
+    "message": "0.9.5",
+  },
+  {
+    "createdAt": 2014-10-16T19:46:24.000Z,
+    "hash": "68cf27071ef9a2a93a7c68b8dccffdc87642c071",
+    "message": "modified disabling systemout and systemerr",
+  },
+  {
+    "createdAt": 2014-11-24T14:21:45.000Z,
+    "hash": "c0155569372aef6b8b4431da813d26c949c93f2b",
+    "message": "Reverting some minor issue in powermeter",
+  },
+  {
+    "createdAt": 2014-11-24T14:20:48.000Z,
+    "hash": "998f28c0a0fcfba8ee0e767f7a41a8d9650d913c",
+    "message": "Minor correction in Timed reducing the still under planning 0.9.5's merging conflicts",
+  },
+  {
+    "createdAt": 2014-10-23T16:07:49.000Z,
+    "hash": "01c1fca7be03074b3514676e8fbb13cd3bfb7693",
+    "message": "2nd optimization",
+  },
+  {
+    "createdAt": 2014-11-21T19:14:49.000Z,
+    "hash": "0a17b0f04d22ff64db305b9ee63f0e15090425c6",
+    "message": "4th optimization",
+  },
+  {
+    "createdAt": 2014-11-15T16:03:16.000Z,
+    "hash": "246979c55184246ac7508db249e8aeb4253a86de",
+    "message": "3rd optimization",
+  },
+  {
+    "createdAt": 2014-08-17T13:26:41.000Z,
+    "hash": "fa838153685e18c363cfec09d62136f8c6fb42ff",
+    "message": "Update README.md",
+  },
+  {
+    "createdAt": 2014-03-14T08:41:58.000Z,
+    "hash": "ff516e657e7a13f53f0a874251aa5a534b7600ba",
+    "message": "Update README.md",
+  },
+  {
+    "createdAt": 2014-03-14T08:40:22.000Z,
+    "hash": "d311cce7590c633d1524396d27e3ad2efd5e4f44",
+    "message": "Basic power metering and modelling + Cloud loading facility",
+  },
+  {
+    "createdAt": 2014-03-13T11:51:47.000Z,
+    "hash": "6b9b9db9fe10b21e7cb830e5421b938b1dc51cf0",
+    "message": "VM and PM schedulers and infrastructure related tests",
+  },
+  {
+    "createdAt": 2014-03-12T15:21:41.000Z,
+    "hash": "1c51691920e80f83f135e31364857eede168706e",
+    "message": "Merge branch 'master' of https://github.com/kecskemeti/dissect-cf",
+  },
+  {
+    "createdAt": 2014-03-12T15:18:53.000Z,
+    "hash": "5646cb5a4e9c25c11213db01e1d4d8604676cfa8",
+    "message": "Infrastructure simulation",
+  },
+  {
+    "createdAt": 2014-03-06T14:10:51.000Z,
+    "hash": "261ad4a3b5e38aba4a06f75e5321bc96ee6a5a4d",
+    "message": "Create .travis.yml",
+  },
+  {
+    "createdAt": 2014-03-04T08:26:13.000Z,
+    "hash": "5a11c0ae00d4336ea9a8dfa4060d7368af12c873",
+    "message": "Storage/Disk functionalities",
+  },
+  {
+    "createdAt": 2014-03-03T13:37:49.000Z,
+    "hash": "a8673ab6fc62bb43e10ae46b1e0c0bcea3b0ff8a",
+    "message": "Uniform handling of resource consumption cancellation and completion",
+  },
+  {
+    "createdAt": 2014-03-03T11:22:30.000Z,
+    "hash": "2659b15de5c859ad407dde426e14a8a5cefd639d",
+    "message": "Basic networking functionality",
+  },
+  {
+    "createdAt": 2014-03-03T08:45:20.000Z,
+    "hash": "30c764dafb210c795f955d2f8e4d9447b0d77253",
+    "message": "Storage and networking foundation",
+  },
+  {
+    "createdAt": 2014-02-28T14:06:39.000Z,
+    "hash": "464ed1f0acdd8282a6248b78c2039d1b40aaac9e",
+    "message": "Resource sharing foundation",
+  },
+  {
+    "createdAt": 2014-02-27T14:50:20.000Z,
+    "hash": "75642bb1ad7732f7ae1bf2d98e5ef74ae3690081",
+    "message": "Basic simulator constructs",
+  },
+  {
+    "createdAt": 2014-01-16T14:26:06.000Z,
+    "hash": "44c74c0601a6e7da5e56060f90e771d3078d11b6",
+    "message": "Promise on soon appearing source",
+  },
+  {
+    "createdAt": 2014-01-09T11:58:10.000Z,
+    "hash": "66ad6d99f1b22dea18a65b89ce5e410d2184a256",
+    "message": "Initial commit",
+  },
+]
+`;
+
+exports[`LocalGit getLatestCommit 1`] = `
+{
+  "createdAt": 2023-05-25T23:18:02.000Z,
+  "hash": "2d0b4b786d0c7113ce76576071e1199ae68e1f02",
+  "message": "Refactoring and simplification of tests and some minor apis",
+}
+`;

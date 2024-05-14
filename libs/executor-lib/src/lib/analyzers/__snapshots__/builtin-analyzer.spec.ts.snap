@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BuiltinAnalyzer 1`] = `
+[
+  AnalysisOutput {
+    "data": {
+      "file": "HelloWorld.java",
+      "imported": "java.util",
+      "packageName": "code_samples",
+      "type": "import",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "className": "HelloWorld",
+      "file": "HelloWorld.java",
+      "packageName": "code_samples",
+      "type": "package_or_class",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "nested/IsEven.java",
+      "imported": "java.util",
+      "packageName": "code_samples.nested",
+      "type": "import",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "className": "IsEven",
+      "file": "nested/IsEven.java",
+      "packageName": "code_samples.nested",
+      "type": "package_or_class",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "packageName": "code_samples",
+      "type": "package_or_class",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "packageName": "code_samples.nested",
+      "type": "package_or_class",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "HelloWorld.java",
+      "imported": "java.util",
+      "packageName": "code_samples",
+      "type": "import",
+    },
+    "index": "public_sca_analysis_result_repository_imports",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "nested/IsEven.java",
+      "imported": "java.util",
+      "packageName": "code_samples.nested",
+      "type": "import",
+    },
+    "index": "public_sca_analysis_result_repository_imports",
+  },
+  AnalysisOutput {
+    "data": {
+      "blankLineCount": 5,
+      "codeLineCount": 18,
+      "commentLineCount": 1,
+      "commentRatio": 0.05263157894736842,
+      "fileCount": 2,
+      "language": "java",
+      "lineCount": 24,
+    },
+    "index": "public_sca_analysis_result_primary_line_counts",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "HelloWorld.java",
+      "symbol": {
+        "kind": "Class",
+        "line": "public class HelloWorld extends Thread implements Runnable {",
+        "nodeType": "DEFINITION",
+        "span": {
+          "end": {
+            "column": 24,
+            "line": 6,
+          },
+          "start": {
+            "column": 14,
+            "line": 6,
+          },
+        },
+        "symbol": "HelloWorld",
+        "syntaxType": "CLASS",
+        "utf16CodeUnitSpan": {
+          "end": {
+            "column": 23,
+            "line": 5,
+          },
+          "start": {
+            "column": 13,
+            "line": 5,
+          },
+        },
+      },
+    },
+    "index": "public_sca_analysis_result_semantic",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "HelloWorld.java",
+      "symbol": {
+        "kind": "Method",
+        "line": "public static void main(String[] args) {",
+        "nodeType": "DEFINITION",
+        "span": {
+          "end": {
+            "column": 28,
+            "line": 7,
+          },
+          "start": {
+            "column": 24,
+            "line": 7,
+          },
+        },
+        "symbol": "main",
+        "syntaxType": "METHOD",
+        "utf16CodeUnitSpan": {
+          "end": {
+            "column": 27,
+            "line": 6,
+          },
+          "start": {
+            "column": 23,
+            "line": 6,
+          },
+        },
+      },
+    },
+    "index": "public_sca_analysis_result_semantic",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "HelloWorld.java",
+      "symbol": {
+        "kind": "Call",
+        "line": "run();",
+        "nodeType": "REFERENCE",
+        "span": {
+          "end": {
+            "column": 12,
+            "line": 8,
+          },
+          "start": {
+            "column": 9,
+            "line": 8,
+          },
+        },
+        "symbol": "run",
+        "syntaxType": "CALL",
+        "utf16CodeUnitSpan": {
+          "end": {
+            "column": 11,
+            "line": 7,
+          },
+          "start": {
+            "column": 8,
+            "line": 7,
+          },
+        },
+      },
+    },
+    "index": "public_sca_analysis_result_semantic",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "HelloWorld.java",
+      "symbol": {
+        "kind": "Method",
+        "line": "public void run() {",
+        "nodeType": "DEFINITION",
+        "span": {
+          "end": {
+            "column": 20,
+            "line": 11,
+          },
+          "start": {
+            "column": 17,
+            "line": 11,
+          },
+        },
+        "symbol": "run",
+        "syntaxType": "METHOD",
+        "utf16CodeUnitSpan": {
+          "end": {
+            "column": 19,
+            "line": 10,
+          },
+          "start": {
+            "column": 16,
+            "line": 10,
+          },
+        },
+      },
+    },
+    "index": "public_sca_analysis_result_semantic",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "HelloWorld.java",
+      "symbol": {
+        "kind": "Call",
+        "line": "System.out.println("Hello World");",
+        "nodeType": "REFERENCE",
+        "span": {
+          "end": {
+            "column": 27,
+            "line": 13,
+          },
+          "start": {
+            "column": 20,
+            "line": 13,
+          },
+        },
+        "symbol": "println",
+        "syntaxType": "CALL",
+        "utf16CodeUnitSpan": {
+          "end": {
+            "column": 26,
+            "line": 12,
+          },
+          "start": {
+            "column": 19,
+            "line": 12,
+          },
+        },
+      },
+    },
+    "index": "public_sca_analysis_result_semantic",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "HelloWorld.java",
+      "symbol": {
+        "kind": "Implementation",
+        "line": "public class HelloWorld extends Thread implements Runnable {",
+        "nodeType": "REFERENCE",
+        "span": {
+          "end": {
+            "column": 59,
+            "line": 6,
+          },
+          "start": {
+            "column": 51,
+            "line": 6,
+          },
+        },
+        "symbol": "Runnable",
+        "syntaxType": "IMPLEMENTATION",
+        "utf16CodeUnitSpan": {
+          "end": {
+            "column": 58,
+            "line": 5,
+          },
+          "start": {
+            "column": 50,
+            "line": 5,
+          },
+        },
+      },
+    },
+    "index": "public_sca_analysis_result_semantic",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "nested/IsEven.java",
+      "symbol": {
+        "kind": "Class",
+        "line": "public class IsEven {",
+        "nodeType": "DEFINITION",
+        "span": {
+          "end": {
+            "column": 20,
+            "line": 5,
+          },
+          "start": {
+            "column": 14,
+            "line": 5,
+          },
+        },
+        "symbol": "IsEven",
+        "syntaxType": "CLASS",
+        "utf16CodeUnitSpan": {
+          "end": {
+            "column": 19,
+            "line": 4,
+          },
+          "start": {
+            "column": 13,
+            "line": 4,
+          },
+        },
+      },
+    },
+    "index": "public_sca_analysis_result_semantic",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "nested/IsEven.java",
+      "symbol": {
+        "kind": "Method",
+        "line": "public static boolean  isEven(int number) {",
+        "nodeType": "DEFINITION",
+        "span": {
+          "end": {
+            "column": 34,
+            "line": 6,
+          },
+          "start": {
+            "column": 28,
+            "line": 6,
+          },
+        },
+        "symbol": "isEven",
+        "syntaxType": "METHOD",
+        "utf16CodeUnitSpan": {
+          "end": {
+            "column": 33,
+            "line": 5,
+          },
+          "start": {
+            "column": 27,
+            "line": 5,
+          },
+        },
+      },
+    },
+    "index": "public_sca_analysis_result_semantic",
+  },
+]
+`;

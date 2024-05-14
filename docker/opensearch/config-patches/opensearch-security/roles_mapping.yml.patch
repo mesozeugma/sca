@@ -1,0 +1,16 @@
+--- /usr/share/opensearch/config/opensearch-security/roles_mapping.yml	2024-02-20 02:54:30.000000000 +0000
++++ /tmp/config/opensearch-security/roles_mapping.yml	2020-04-16 12:00:00.000000000 +0000
+@@ -47,3 +47,13 @@
+   reserved: true
+   users:
+   - "kibanaserver"
++
++kibana_read_only:
++  reserved: true
++  backend_roles:
++  - "guest"
++
++guest:
++  reserved: true
++  backend_roles:
++  - "guest"

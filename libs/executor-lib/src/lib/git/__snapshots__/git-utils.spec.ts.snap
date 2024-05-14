@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GitUtils getYearlyCommits 1`] = `
+[
+  {
+    "createdAt": 2023-05-25T23:18:02.000Z,
+    "hash": "2d0b4b786d0c7113ce76576071e1199ae68e1f02",
+    "message": "Refactoring and simplification of tests and some minor apis",
+  },
+  {
+    "createdAt": 2022-09-12T22:03:39.000Z,
+    "hash": "2a0e8beceb65a6c1fbacef8e05d02eea400b18ba",
+    "message": "InfrastructureModel's fitness is now calculated with a more functional approach",
+  },
+  {
+    "createdAt": 2020-06-24T16:42:27.000Z,
+    "hash": "4aebd2a429f47ffe8d6663cf28a25fc4afdabb49",
+    "message": "Code quality marker, travis link to the front",
+  },
+  {
+    "createdAt": 2019-05-16T16:39:13.000Z,
+    "hash": "4325ccc6a3b280b60bf3642ff5699c0a4c524b9e",
+    "message": "FFBFD improver applied in a consolidator",
+  },
+  {
+    "createdAt": 2018-11-11T21:17:51.000Z,
+    "hash": "c9008738dbac47af406a1a3db2db3cec3bbca0ab",
+    "message": "PSO improvements about final selection and bugfixes",
+  },
+]
+`;

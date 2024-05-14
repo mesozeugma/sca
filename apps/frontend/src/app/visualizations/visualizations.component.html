@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Visualizations</mat-card-title>
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-stroked-button [routerLink]="['multi-select']" color="primary">
+      Multi-Select
+    </button>
+    <button mat-stroked-button [routerLink]="['side-by-side']" color="primary">
+      Side-by-Side
+    </button>
+  </mat-card-actions>
+</mat-card>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Bookmarks</mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="bookmarks$ | async as bookmarks">
+    <mat-list>
+      <mat-list-item *ngFor="let bookmark of bookmarks">
+        <mat-icon matListItemIcon (click)="openBookmark(bookmark)"
+          >bookmark</mat-icon
+        >
+        <div matListItemTitle>{{ bookmark.name }}</div>
+        <div matListItemLine>{{ bookmark.path }}</div>
+        <div matListItemMeta (click)="deleteBookmark(bookmark)">Delete</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+<mat-paginator
+  [pageIndex]="paginationPageIndex"
+  [pageSize]="paginationPageSize"
+  [disabled]="paginationDisabled"
+  hidePageSize="true"
+  [length]="paginationItemCount"
+  (page)="pagination$.next($event)"
+  showFirstLastButtons="true"
+/>

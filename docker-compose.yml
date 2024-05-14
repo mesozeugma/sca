@@ -1,0 +1,38 @@
+services:
+  caddy:
+    build: docker/caddy/
+    depends_on:
+      opensearch:
+        condition: service_healthy
+    ports:
+      - 5601:5601
+      - 5602:5602
+      - 9200:9200
+
+  opensearch:
+    image: localhost:5000/sca-opensearch:dev
+    environment:
+      bootstrap.memory_lock: 'true'
+      discovery.type: single-node
+      node.name: opensearch
+      OPENSEARCH_JAVA_OPTS: -Xms512m -Xmx512m
+    # ulimits:
+    #   memlock:
+    #     soft: -1
+    #     hard: -1
+    #   nofile:
+    #     soft: 65536
+    #     hard: 65536
+    volumes:
+      - opensearch-data:/usr/share/opensearch/data
+
+  opensearch-dashboards:
+    image: localhost:5000/sca-opensearch-dashboards:dev
+    depends_on:
+      opensearch:
+        condition: service_healthy
+    environment:
+      OPENSEARCH_HOSTS: '["https://opensearch:9200"]'
+
+volumes:
+  opensearch-data:

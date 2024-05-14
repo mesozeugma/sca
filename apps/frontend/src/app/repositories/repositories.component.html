@@ -1,0 +1,57 @@
+<mat-card>
+  <mat-card-actions>
+    <button mat-stroked-button [routerLink]="['create']" color="primary">
+      Add repository
+    </button>
+  </mat-card-actions>
+</mat-card>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Repositories</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let repository of repositories">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ repository.repositoryName }}</mat-panel-title>
+          <mat-panel-description>
+            {{ repository.gitCloneUrl }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-list>
+          <mat-list-item>
+            <span matListItemTitle>{{ repository.defaults.buildTool }}</span>
+            <span matListItemLine>Build tool</span>
+          </mat-list-item>
+          <mat-list-item>
+            <span matListItemTitle>{{
+              repository.defaults.isSonarQubeEnabled
+            }}</span>
+            <span matListItemLine>SonarQube enabled</span>
+          </mat-list-item>
+        </mat-list>
+
+        <mat-action-row>
+          <button mat-button [routerLink]="['view', repository.id]">
+            View
+          </button>
+          <button mat-button [routerLink]="['edit', repository.id]">
+            Edit
+          </button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-paginator
+      [pageIndex]="paginationPageIndex"
+      [pageSize]="paginationPageSize"
+      [disabled]="paginationDisabled"
+      hidePageSize="true"
+      [length]="paginationItemCount"
+      (page)="pagination$.next($event)"
+      showFirstLastButtons="true"
+    />
+  </mat-card-footer>
+</mat-card>

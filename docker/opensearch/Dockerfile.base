@@ -1,0 +1,7 @@
+ARG OPENSEARCH_VERSION
+FROM opensearchproject/opensearch:${OPENSEARCH_VERSION}
+
+# https://opensearch.org/blog/replacing-default-admin-credentials/
+ENV OPENSEARCH_INITIAL_ADMIN_PASSWORD="FakeStrongPassword123!"
+HEALTHCHECK --interval=15s --timeout=10s --start-period=60s --retries=5 \
+    CMD [ "curl", "--insecure", "--silent", "--fail", "--show-error", "--user", "admin:FakeStrongPassword123!", "https://127.0.0.1:9200/_cluster/health" ]

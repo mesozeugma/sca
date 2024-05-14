@@ -1,0 +1,32 @@
+VERSION 0.8
+
+# for local testing using cloned git repository
+# ARG --global SCA_DEPLOY_SRC="../.."
+ARG --global SCA_DEPLOY_SRC="github.com/mesozeugma/sca"
+
+caddy:
+    FROM ${SCA_DEPLOY_SRC}/docker+caddy
+    COPY ${SCA_DEPLOY_SRC}+nx-build/apps/frontend/ /www/
+
+install:
+    FROM alpine:3.19.1
+    WORKDIR /app/
+    COPY ${SCA_DEPLOY_SRC}/docs/deploy/files+docker-compose/files/* /app/files/
+    COPY backend.env /app/files/backend.env
+    RUN echo "EXECUTOR_IMAGE=${SCA_DEPLOY_SRC}/apps/executor+docker-image" >> files/.env
+    SAVE ARTIFACT files/* AS LOCAL sca/
+
+compose:
+    LOCALLY
+    ENV COMPOSE_FILE="sca/docker-compose.yml"
+    ARG --required CMD_ARGS
+    WITH DOCKER \
+        --load localhost:5000/sca-backend:earthly=${SCA_DEPLOY_SRC}/apps/backend+docker-image \
+        --load localhost:5000/sca-caddy:earthly=+caddy \
+        --load localhost:5000/sca-opensearch:earthly=${SCA_DEPLOY_SRC}/docker+opensearch \
+        --load localhost:5000/sca-opensearch-dashboards:earthly=${SCA_DEPLOY_SRC}/docker+opensearch-dashboards
+        RUN docker compose ${CMD_ARGS}
+    END
+
+start:
+    BUILD +compose --CMD_ARGS="up --remove-orphans --wait"

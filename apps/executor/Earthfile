@@ -1,0 +1,85 @@
+VERSION 0.8
+
+alpine:
+    FROM alpine:3.19.1
+
+docker-cli:
+    FROM docker:25.0.4-cli
+    SAVE ARTIFACT /usr/local/bin/docker
+    SAVE ARTIFACT /usr/local/libexec/docker/cli-plugins/docker-buildx
+    SAVE ARTIFACT /usr/local/libexec/docker/cli-plugins/docker-compose
+
+earthly:
+    FROM earthly/earthly:v0.8.4
+    WORKDIR /usr/bin
+    SAVE ARTIFACT earthly
+
+scc:
+    FROM +alpine
+    ARG SCC_VERSION="3.2.0"
+    RUN wget --output-document=/tmp/app.tar.gz "https://github.com/boyter/scc/releases/download/v${SCC_VERSION}/scc_Linux_x86_64.tar.gz"
+    WORKDIR /app
+    RUN tar xz --directory=/app --file=/tmp/app.tar.gz
+    SAVE ARTIFACT scc
+
+semantic:
+    FROM ghcr.io/github/semantic/semantic:sha_d6737eb0a0e06fe6ba18e2c91f3cdbd993614499
+    WORKDIR /usr/local/bin
+    SAVE ARTIFACT semantic
+
+IMPORT_BINARY_DEPENDENCIES:
+    FUNCTION
+    RUN set -x \
+        && apt-get update \
+        && apt-get install -y \
+            libgmp10 \
+            libtinfo5 \
+        && apt-get autoremove -y \
+        && apt-get clean -y \
+        && rm -rf /var/lib/apt/lists/*
+    COPY +semantic/semantic /usr/local/bin/
+    RUN semantic --version
+    COPY +scc/scc /usr/local/bin/
+    RUN scc --version
+    COPY +docker-cli/docker /usr/local/bin/
+    RUN docker --version
+    COPY +earthly/earthly /usr/local/bin/
+    RUN earthly --version
+
+git-clone:
+    FROM +alpine
+    RUN apk add --no-cache \
+            git
+
+    ARG --required REPO_GIT_CLONE_URL
+    RUN git clone "${REPO_GIT_CLONE_URL}" repository
+
+    ARG REPO_GIT_PULL="false"
+    IF [ "${REPO_GIT_PULL}" == "true" ]
+        RUN --no-cache set -x \
+            && cd repository/ \
+            && git pull origin
+    END
+
+    ARG --required REPO_GIT_COMMIT_HASH
+    RUN set -x \
+        && cd /repository \
+        && git -c advice.detachedHead=false checkout $REPO_GIT_COMMIT_HASH
+
+    SAVE ARTIFACT repository/
+    # COPY (+git-clone/repository/ --REPO_GIT_CLONE_URL=$REPO_GIT_CLONE_URL --REPO_GIT_COMMIT_HASH=$REPO_GIT_COMMIT_HASH) /repository/
+
+IMPORT_TEST_DEPENDENCIES:
+    FUNCTION
+    ARG --required PROJECT_ROOT
+    COPY (+git-clone/repository/ --REPO_GIT_CLONE_URL="https://github.com/kecskemeti/dissect-cf" --REPO_GIT_COMMIT_HASH="2d0b4b786d0c7113ce76576071e1199ae68e1f02") ${PROJECT_ROOT}/code-samples/dissect-cf/
+
+docker-image:
+    FROM ../../+node
+    DO +IMPORT_BINARY_DEPENDENCIES
+
+    DO ../../+APP --APP_NAME="executor"
+
+    ENV NODE_ENV="production"
+    ENTRYPOINT ["node", "cmd/analyze-repo.js"]
+    CMD []

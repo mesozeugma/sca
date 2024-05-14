@@ -1,0 +1,47 @@
+services:
+  backend:
+    image: localhost:5000/sca-backend:earthly
+    depends_on:
+      caddy:
+        condition: service_healthy
+    environment:
+      EXECUTOR_IMAGE: ${EXECUTOR_IMAGE}
+      OPENSEARCH_DASHBOARDS_BASE_URL: http://caddy:5602/opensearch-dashboards
+      OPENSEARCH_URL: http://caddy:9200
+    env_file:
+      - backend.env
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  caddy:
+    image: localhost:5000/sca-caddy:earthly
+    depends_on:
+      opensearch:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+
+  opensearch:
+    image: localhost:5000/sca-opensearch:earthly
+    environment:
+      bootstrap.memory_lock: 'true'
+      discovery.type: single-node
+      node.name: opensearch
+      OPENSEARCH_JAVA_OPTS: -Xms512m -Xmx512m
+    restart: unless-stopped
+    volumes:
+      - opensearch-data:/usr/share/opensearch/data
+
+  opensearch-dashboards:
+    image: localhost:5000/sca-opensearch-dashboards:earthly
+    depends_on:
+      opensearch:
+        condition: service_healthy
+    environment:
+      OPENSEARCH_HOSTS: '["https://opensearch:9200"]'
+    restart: unless-stopped
+
+volumes:
+  opensearch-data:

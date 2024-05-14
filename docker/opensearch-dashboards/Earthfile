@@ -1,0 +1,43 @@
+VERSION 0.8
+
+opensearch-dashboards:
+    ARG --required OPENSEARCH_VERSION
+    FROM DOCKERFILE --build-arg OPENSEARCH_VERSION -f Dockerfile.base .
+
+docker-image:
+    FROM +opensearch-dashboards
+    COPY +build-config/config/ /usr/share/opensearch-dashboards/config/
+
+export-config:
+    FROM +opensearch-dashboards
+    WORKDIR /usr/share/opensearch-dashboards
+    SAVE ARTIFACT config/opensearch_dashboards.yml AS LOCAL config/opensearch_dashboards.yml
+
+build-config:
+    FROM +opensearch-dashboards
+    USER root
+    RUN set -x \
+        && yum update --assumeyes \
+        && yum install --assumeyes \
+            patch \
+        && yum clean all
+
+    COPY config-patches/ /config-patches/
+    RUN patch /usr/share/opensearch-dashboards/config/opensearch_dashboards.yml /config-patches/opensearch_dashboards.yml.patch
+    WORKDIR /usr/share/opensearch-dashboards
+    SAVE ARTIFACT config
+
+update-config-patches:
+    FROM +opensearch-dashboards
+    USER root
+    RUN set -x \
+        && yum update --assumeyes \
+        && yum install --assumeyes \
+            diffutils \
+        && yum clean all
+
+    RUN mkdir -p /patches/config
+    COPY config/opensearch_dashboards.yml /tmp/config/opensearch_dashboards.yml
+    RUN diff --unified /usr/share/opensearch-dashboards/config/opensearch_dashboards.yml /tmp/config/opensearch_dashboards.yml > /patches/config/opensearch_dashboards.yml.patch; [ "$?" = 1 ]
+    WORKDIR /
+    SAVE ARTIFACT patches/config/* AS LOCAL config-patches/

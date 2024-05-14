@@ -1,0 +1,107 @@
+services:
+  sonarqube:
+    image: sonarqube:9.9-community
+    depends_on:
+      sonarqube-db:
+        condition: service_healthy
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://sonarqube-db:5432/postgres
+      SONAR_JDBC_USERNAME: postgres
+      SONAR_JDBC_PASSWORD: postgres
+    healthcheck:
+      interval: 10s
+      retries: 6
+      start_period: 30s
+      timeout: 5s
+      test:
+        - CMD
+        - wget
+        - --auth-no-challenge
+        - --http-password=admin
+        - --http-user=admin
+        - --output-document=-
+        - --quiet
+        - --tries=1
+        - http://127.0.0.1:9000/api/system/ping
+    ports:
+      - 127.0.0.1:9000:9000
+    volumes:
+      - sonarqube-data:/opt/sonarqube/data
+      - sonarqube-extensions:/opt/sonarqube/extensions
+      - sonarqube-logs:/opt/sonarqube/logs
+
+  sonarqube-db:
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    healthcheck:
+      test: [CMD, pg_isready, --username=postgres]
+      interval: 5s
+      timeout: 3s
+    volumes:
+      - sonarqube-db-data:/var/lib/postgresql
+
+  scan-maven:
+    image: maven:3.9.0-eclipse-temurin-11
+    deploy:
+      replicas: 0
+    entrypoint:
+      - mvn
+      - test
+      - sonar:sonar
+      - -Dcheckstyle.skip=true
+      - -Dsonar.projectKey=projectkey
+      - -Dsonar.host.url=http://sonarqube:9000
+      - -Dsonar.login=${SONARQUBE_TOKEN}
+      - -Dsonar.qualitygate.wait=true
+    environment:
+      MAVEN_OPTS: -Xmx1024m
+    # compose up --wait fails with deploy.replicas: 0 on >=2.23.1 <2.24.0
+    scale: 0
+    volumes:
+      - /repository:/repository
+      - /root/.m2:/root/.m2
+      - /root/.sonar/cache:/root/.sonar/cache
+    working_dir: /repository/${REPO_WORKDIR}
+
+  scan-sonar-scanner-cli:
+    image: sonarsource/sonar-scanner-cli:5.0.1
+    deploy:
+      replicas: 0
+    entrypoint:
+      - sonar-scanner
+      - -Dsonar.projectKey=projectkey
+      - -Dsonar.host.url=http://sonarqube:9000
+      - -Dsonar.login=${SONARQUBE_TOKEN}
+      - -Dsonar.qualitygate.wait=true
+    # compose up --wait fails with deploy.replicas: 0 on >=2.23.1 <2.24.0
+    scale: 0
+    volumes:
+      - /repository:/repository
+      - /opt/sonar-scanner/.sonar/cache:/opt/sonar-scanner/.sonar/cache
+    working_dir: /repository/${REPO_WORKDIR}
+
+  export-result:
+    image: localhost:5000/sca-executor:earthly
+    deploy:
+      replicas: 0
+    entrypoint:
+      - node
+      - /app/cmd/sonarqube.js
+      - projectkey
+    environment:
+      SONARQUBE_TOKEN: ${SONARQUBE_TOKEN}
+      SONARQUBE_URL: http://sonarqube:9000
+    # compose up --wait fails with deploy.replicas: 0 on >=2.23.1 <2.24.0
+    scale: 0
+    volumes:
+      - /completed:/completed
+    working_dir: /completed
+
+volumes:
+  sonarqube-db-data:
+  sonarqube-data:
+  sonarqube-extensions:
+  sonarqube-logs:

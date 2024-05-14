@@ -1,0 +1,12 @@
+VERSION 0.8
+
+ARG --global OPENSEARCH_VERSION="2.12.0"
+
+caddy:
+    FROM ./caddy+docker-image
+
+opensearch:
+    FROM ./opensearch+docker-image --OPENSEARCH_VERSION=$OPENSEARCH_VERSION
+
+opensearch-dashboards:
+    FROM ./opensearch-dashboards+docker-image --OPENSEARCH_VERSION=$OPENSEARCH_VERSION

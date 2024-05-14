@@ -1,0 +1,52 @@
+VERSION 0.8
+
+opensearch:
+    ARG --required OPENSEARCH_VERSION
+    FROM DOCKERFILE --build-arg OPENSEARCH_VERSION -f Dockerfile.base .
+
+docker-image:
+    FROM +opensearch
+    COPY +build-config/config/ /usr/share/opensearch/config/
+
+export-config:
+    FROM +opensearch
+    WORKDIR /usr/share/opensearch
+    SAVE ARTIFACT config AS LOCAL build/
+    SAVE ARTIFACT config/opensearch-security/config.yml AS LOCAL config/opensearch-security/config.yml
+    SAVE ARTIFACT config/opensearch-security/roles.yml AS LOCAL config/opensearch-security/roles.yml
+    SAVE ARTIFACT config/opensearch-security/roles_mapping.yml AS LOCAL config/opensearch-security/roles_mapping.yml
+
+build-config:
+    FROM +opensearch
+    USER root
+    RUN set -x \
+        && yum update --assumeyes \
+        && yum install --assumeyes \
+            patch \
+        && yum clean all
+
+    COPY config-patches/ /config-patches/
+    RUN patch /usr/share/opensearch/config/opensearch-security/config.yml /config-patches/opensearch-security/config.yml.patch
+    RUN patch /usr/share/opensearch/config/opensearch-security/roles.yml /config-patches/opensearch-security/roles.yml.patch
+    RUN patch /usr/share/opensearch/config/opensearch-security/roles_mapping.yml /config-patches/opensearch-security/roles_mapping.yml.patch
+    WORKDIR /usr/share/opensearch
+    SAVE ARTIFACT config
+
+update-config-patches:
+    FROM +opensearch
+    USER root
+    RUN set -x \
+        && yum update --assumeyes \
+        && yum install --assumeyes \
+            diffutils \
+        && yum clean all
+
+    RUN mkdir -p /patches/config/opensearch-security
+    COPY config/opensearch-security/config.yml /tmp/config/opensearch-security/config.yml
+    RUN diff --unified /usr/share/opensearch/config/opensearch-security/config.yml /tmp/config/opensearch-security/config.yml > /patches/config/opensearch-security/config.yml.patch; [ "$?" = 1 ]
+    COPY config/opensearch-security/roles.yml /tmp/config/opensearch-security/roles.yml
+    RUN diff --unified /usr/share/opensearch/config/opensearch-security/roles.yml /tmp/config/opensearch-security/roles.yml > /patches/config/opensearch-security/roles.yml.patch; [ "$?" = 1 ]
+    COPY config/opensearch-security/roles_mapping.yml /tmp/config/opensearch-security/roles_mapping.yml
+    RUN diff --unified /usr/share/opensearch/config/opensearch-security/roles_mapping.yml /tmp/config/opensearch-security/roles_mapping.yml > /patches/config/opensearch-security/roles_mapping.yml.patch; [ "$?" = 1 ]
+    WORKDIR /
+    SAVE ARTIFACT patches/config/* AS LOCAL config-patches/

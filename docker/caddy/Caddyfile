@@ -1,0 +1,55 @@
+{
+    auto_https off
+}
+
+:9200 {
+    reverse_proxy https://opensearch:9200 {
+        transport http {
+            tls_insecure_skip_verify
+        }
+        header_up x-proxy-user admin
+        header_up x-proxy-roles admin
+        header_up -authorization
+    }
+}
+
+:5601 {
+    reverse_proxy http://opensearch-dashboards:5601 {
+        header_up x-proxy-user guest
+        header_up x-proxy-roles guest,kibanauser
+        header_up -authorization
+    }
+}
+
+:5602 {
+    reverse_proxy http://opensearch-dashboards:5601 {
+        header_up x-proxy-user admin
+        header_up x-proxy-roles admin
+        header_up -authorization
+    }
+}
+
+:8080 {
+    root * /www
+	encode gzip
+
+    redir /api /api/
+    redir /opensearch-dashboards /opensearch-dashboards/
+
+    @api path /api/*
+    @opensearch-dashboards path /opensearch-dashboards/*
+
+	handle @api {
+		uri replace /api/ /trpc/
+		reverse_proxy backend:3000
+	}
+
+	handle @opensearch-dashboards {
+        reverse_proxy 127.0.0.1:5601
+	}
+
+    handle {
+        try_files {path} /index.html
+        file_server
+    }
+}

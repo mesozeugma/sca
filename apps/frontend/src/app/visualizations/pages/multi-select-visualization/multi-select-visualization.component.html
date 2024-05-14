@@ -1,0 +1,138 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Options</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="repositories-form-field">
+        <mat-label>Repositories</mat-label>
+        <mat-chip-grid #chipGrid>
+          <ng-container
+            *ngFor="let repository of form.controls.repositories.value"
+          >
+            <mat-chip-row (removed)="deselectRepository(repository)">
+              {{ repository }}
+              <button matChipRemove>
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+          </ng-container>
+        </mat-chip-grid>
+        <input
+          #repositoryInput
+          type="text"
+          matInput
+          [formControl]="autocompleteRepositoryForm"
+          [matAutocomplete]="repositoryAutocomplete"
+          [matChipInputFor]="chipGrid"
+          (matChipInputTokenEnd)="addRepository($event)"
+          (input)="autocompleteRepository$.next(repositoryInput.value)"
+          (focus)="autocompleteRepository$.next(repositoryInput.value)"
+        />
+        <mat-autocomplete
+          #repositoryAutocomplete="matAutocomplete"
+          (optionSelected)="selectRepository($event.option.value)"
+        >
+          <ng-container *ngFor="let repository of repositories">
+            <mat-option [value]="repository">{{ repository }}</mat-option>
+          </ng-container>
+        </mat-autocomplete>
+      </mat-form-field>
+      <mat-error
+        *ngIf="
+          form.controls.repositories.hasError('required') ||
+          form.controls.repositories.hasError('minlength')
+        "
+        >Minimum repository 1 must be selected</mat-error
+      >
+      <mat-error *ngIf="form.controls.repositories.hasError('maxlength')"
+        >This many repository can not be selected</mat-error
+      >
+      <mat-divider></mat-divider>
+      <mat-form-field>
+        <mat-label>Start date</mat-label>
+        <input
+          #startDateInput
+          type="text"
+          matInput
+          formControlName="dateStart"
+          [matAutocomplete]="startDateAutocomplete"
+          (input)="autocompleteDate$.next(startDateInput.value)"
+          (focus)="autocompleteDate$.next(startDateInput.value)"
+        />
+        <mat-autocomplete
+          requireSelection
+          #startDateAutocomplete="matAutocomplete"
+        >
+          <mat-option
+            *ngFor="let commit of commits"
+            [value]="commit.gitCommit.createdAt"
+            >{{ commit.gitCommit.createdAt | date }} ({{
+              commit.repository.name
+            }}
+            &#64; {{ commit.gitCommit.hash }})</mat-option
+          >
+        </mat-autocomplete>
+        <mat-hint *ngIf="form.controls.dateStart.value as dateStart"
+          >Selected: {{ dateStart | date }}</mat-hint
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>End date</mat-label>
+        <input
+          #endDateInput
+          type="text"
+          matInput
+          formControlName="dateEnd"
+          [matAutocomplete]="endDateAutocomplete"
+          (input)="autocompleteDate$.next(endDateInput.value)"
+          (focus)="autocompleteDate$.next(endDateInput.value)"
+        />
+        <mat-autocomplete
+          requireSelection
+          #endDateAutocomplete="matAutocomplete"
+        >
+          <mat-option
+            *ngFor="let commit of commits"
+            [value]="commit.gitCommit.createdAt"
+            >{{ commit.gitCommit.createdAt | date }} ({{
+              commit.repository.name
+            }}
+            &#64; {{ commit.gitCommit.hash }})</mat-option
+          >
+        </mat-autocomplete>
+        <mat-hint *ngIf="form.controls.dateEnd.value as dateEnd"
+          >Selected: {{ dateEnd | date }}</mat-hint
+        >
+      </mat-form-field>
+      <mat-divider></mat-divider>
+      <mat-checkbox formControlName="codeQuantity">Code quantity</mat-checkbox>
+      <mat-checkbox formControlName="codeQuality">Code quality</mat-checkbox>
+      <mat-divider></mat-divider>
+      <mat-form-field *ngIf="isLoggedIn()">
+        <mat-label>Bookmark name</mat-label>
+        <input matInput formControlName="bookmarkName" />
+      </mat-form-field>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button type="submit" [disabled]="!form.valid">Submit</button>
+      <button
+        *ngIf="isLoggedIn()"
+        mat-button
+        type="button"
+        [disabled]="form.controls.bookmarkName.value.length === 0"
+        (click)="saveBookmark()"
+      >
+        Bookmark
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+
+<iframe
+  *ngIf="dashboard"
+  [src]="dashboard.url | safe"
+  [height]="dashboard.height"
+  width="100%"
+></iframe>

@@ -1,0 +1,13 @@
+*
+!apps/
+!libs/
+!test/
+!.eslintignore
+!.eslintrc.json
+!jest.config.ts
+!jest.preset.js
+!.prettierignore
+!.prettierrc
+!nx.json
+!package*.json
+!tsconfig.base.json

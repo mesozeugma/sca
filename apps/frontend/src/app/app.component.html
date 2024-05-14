@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-actions>
+    <button mat-button [routerLink]="['/']">Home</button>
+    <button mat-button [routerLink]="['/visualizations']">
+      Visualizations
+    </button>
+    <button mat-button [routerLink]="['/explore']">Explore</button>
+    <ng-container *ngIf="isLoggedIn()">
+      <button mat-button [routerLink]="['/repositories']">Repositories</button>
+      <button mat-button [routerLink]="['/tasks']">Tasks</button>
+    </ng-container>
+  </mat-card-actions>
+</mat-card>
+<router-outlet></router-outlet>

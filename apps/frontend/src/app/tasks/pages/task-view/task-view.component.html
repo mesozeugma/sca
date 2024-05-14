@@ -1,0 +1,54 @@
+<mat-card *ngIf="task">
+  <mat-card-header>
+    <mat-card-title>{{ task.type }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <span matListItemTitle>{{ task.status.type }}</span>
+        <span matListItemLine>status</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>{{ task.status.updatedAt | date }}</span>
+        <span matListItemLine>status updatedAt</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>{{ task.createdAt | date }}</span>
+        <span matListItemLine>createdAt</span>
+      </mat-list-item>
+      <mat-list-item *ngFor="let taskOption of task.options | keyvalue">
+        <span matListItemTitle>{{ taskOption.value }}</span>
+        <span matListItemLine>{{ taskOption.key }}</span>
+      </mat-list-item>
+    </mat-list>
+    <mat-divider></mat-divider>
+    <mat-expansion-panel *ngIf="task.log.stderr">
+      <mat-expansion-panel-header>
+        <mat-panel-title>Log</mat-panel-title>
+        <mat-panel-description> stderr </mat-panel-description>
+      </mat-expansion-panel-header>
+      <pre>{{ task.log.stderr }}</pre>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngIf="task.log.stdout">
+      <mat-expansion-panel-header>
+        <mat-panel-title>Log</mat-panel-title>
+        <mat-panel-description> stdout </mat-panel-description>
+      </mat-expansion-panel-header>
+      <pre>{{ task.log.stdout }}</pre>
+    </mat-expansion-panel>
+    <mat-divider></mat-divider>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-button
+      [routerLink]="['/repositories', 'view', task.repositoryId]"
+      *ngIf="task.repositoryId"
+    >
+      View repository
+    </button>
+    <button mat-button (click)="approveTask()" *ngIf="needsApproval()">
+      Approve
+    </button>
+    <button mat-button (click)="deleteTask()" color="warn">Delete</button>
+  </mat-card-actions>
+</mat-card>

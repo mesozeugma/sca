@@ -1,0 +1,64 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Package explorer</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form
+      *ngIf="isLoggedIn()"
+      [formGroup]="bookmarkForm"
+      (ngSubmit)="submitBookmarkForm()"
+    >
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Bookmark</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field>
+            <mat-label>Bookmark name</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button type="submit" [disabled]="!bookmarkForm.valid">
+            Save
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+    <mat-card *ngIf="isNoDataAvailable">
+      <mat-card-header>
+        <mat-card-title>No data available</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          There is no data available for the specified repository and commit.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-chip-set>
+      <mat-chip (click)="backToPackageIndex(-1)">/</mat-chip>
+      <mat-chip
+        *ngFor="let package of packageTree; index as i"
+        (click)="backToPackageIndex(i)"
+        >{{ package }}</mat-chip
+      >
+    </mat-chip-set>
+    <mat-list *ngIf="items$ | async as items">
+      <mat-list-item *ngFor="let item of items" matRipple (click)="open(item)">
+        <mat-icon matListItemIcon>{{ getIcon(item) }}</mat-icon>
+        <div matListItemTitle>{{ item.value }}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-paginator
+      [pageIndex]="paginationPageIndex"
+      [pageSize]="paginationPageSize"
+      [disabled]="paginationDisabled"
+      hidePageSize="true"
+      [length]="paginationItemCount"
+      (page)="pagination$.next($event)"
+      showFirstLastButtons="true"
+    />
+  </mat-card-footer>
+</mat-card>

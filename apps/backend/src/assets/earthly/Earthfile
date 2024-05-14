@@ -1,0 +1,124 @@
+VERSION 0.8
+
+ARG --global --required REPO_GIT_CLONE_URL
+ARG --global --required REPO_GIT_COMMIT_HASH
+
+alpine:
+    FROM alpine:3.19.1
+
+GIT_CLONE:
+    FUNCTION
+    ARG --required DESTINATION_PATH
+    GIT CLONE --branch=${REPO_GIT_COMMIT_HASH} "${REPO_GIT_CLONE_URL}" "${DESTINATION_PATH}"
+
+git-clone:
+    FROM +alpine
+    RUN apk add --no-cache \
+            git
+
+    ARG --required REPO_GIT_CLONE_URL
+    RUN git clone "${REPO_GIT_CLONE_URL}" repository
+
+    ARG REPO_GIT_PULL="false"
+    IF [ "${REPO_GIT_PULL}" == "true" ]
+        RUN --no-cache set -x \
+            && cd repository/ \
+            && git pull origin
+    END
+
+    ARG --required REPO_GIT_COMMIT_HASH
+    RUN set -x \
+        && cd /repository \
+        && git -c advice.detachedHead=false checkout $REPO_GIT_COMMIT_HASH
+
+    SAVE ARTIFACT repository/
+    # COPY (+git-clone/repository/ --REPO_GIT_CLONE_URL=$REPO_GIT_CLONE_URL --REPO_GIT_COMMIT_HASH=$REPO_GIT_COMMIT_HASH) /repository/
+
+executor-docker-image:
+    ARG --required EXECUTOR_IMAGE
+    FROM ${EXECUTOR_IMAGE}
+
+SONARQUBE_SCANNER_RUN:
+    FUNCTION
+    COPY sonarqube/docker-compose.yml /app/
+    ARG --required SONAR_SCANNER_TYPE
+    IF [ "$SONAR_SCANNER_TYPE" = "maven" ]
+        CACHE /root/.m2
+        CACHE /root/.sonar/cache
+    ELSE IF [ "$SONAR_SCANNER_TYPE" = "sonar-scanner-cli" ]
+        CACHE /opt/sonar-scanner/.sonar/cache
+    END
+    ARG --required EXECUTOR_IMAGE
+    ARG --required REPO_WORKDIR
+    ENV REPO_WORKDIR="${REPO_WORKDIR}"
+    WITH DOCKER \
+        --compose docker-compose.yml \
+        --load localhost:5000/sca-executor:earthly=${EXECUTOR_IMAGE}
+        RUN set -x \
+            # compose up --wait fails with deploy.replicas: 0 on >=2.23.1 <2.24.0
+            && docker compose version \
+            && docker compose up --wait \
+            && wget  --auth-no-challenge --http-password=admin --http-user=admin --output-document=sonarqube-token.json --post-data 'name=analysis' --quiet --tries=1 http://127.0.0.1:9000/api/user_tokens/generate \
+            && export SONARQUBE_TOKEN=$(jq --raw-output '.token' sonarqube-token.json) \
+            && docker compose run "scan-${SONAR_SCANNER_TYPE}" \
+            && docker compose run export-result
+    END
+
+sonarqube:
+    FROM earthly/dind:alpine
+
+    RUN apk add --no-cache \
+            # busybox wget doesn't support authentication
+            wget
+
+    DO +GIT_CLONE --DESTINATION_PATH=/repository
+    WORKDIR /app
+
+    ARG --required BUILD_TOOL
+    ARG --required EXECUTOR_IMAGE
+    ARG --required REPO_WORKDIR
+    IF [ "$BUILD_TOOL" = "maven" ]
+        DO +SONARQUBE_SCANNER_RUN --EXECUTOR_IMAGE=$EXECUTOR_IMAGE --SONAR_SCANNER_TYPE="maven" --REPO_WORKDIR="$REPO_WORKDIR"
+    ELSE IF [ "$BUILD_TOOL" = "none" ]
+        DO +SONARQUBE_SCANNER_RUN --EXECUTOR_IMAGE=$EXECUTOR_IMAGE --SONAR_SCANNER_TYPE="sonar-scanner-cli" --REPO_WORKDIR="$REPO_WORKDIR"
+    ELSE
+        RUN echo "SonarQube scanner is not supported for this configuration" \
+            && exit 1
+    END
+
+    WORKDIR /completed
+    SAVE ARTIFACT result.json
+
+analyze-repo:
+    FROM +executor-docker-image
+    DO +GIT_CLONE --DESTINATION_PATH=/repository
+
+    WORKDIR /repository/${REPO_WORKDIR}
+    RUN node /app/cmd/analyze-repo.js "/repository/${REPO_WORKDIR}"
+    SAVE ARTIFACT result.json
+
+analyze-repository-result:
+    FROM +executor-docker-image
+
+    COPY +analyze-repo/result.json /results/analyze-repo.json
+
+    ARG --required SONARQUBE_ENABLED
+    IF [ "$SONARQUBE_ENABLED" = "true" ]
+        COPY +sonarqube/result.json /results/sonarqube.json
+    END
+
+    WORKDIR /tmp
+    RUN node /app/cmd/merge-results.js /results
+    SAVE ARTIFACT result.json
+
+git-history-result:
+    FROM +executor-docker-image
+    COPY +git-clone/repository/ /repository/
+    RUN node /app/cmd/git-history.js /repository
+    SAVE ARTIFACT result.json
+
+git-latest-commit-result:
+    FROM +executor-docker-image
+    COPY +git-clone/repository/ /repository/
+    RUN node /app/cmd/git-latest-commit.js /repository
+    SAVE ARTIFACT result.json

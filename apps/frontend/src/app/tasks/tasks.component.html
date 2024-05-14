@@ -1,0 +1,68 @@
+<mat-card>
+  <mat-card-actions>
+    <button
+      mat-stroked-button
+      [routerLink]="['create', 'analyze-repository']"
+      color="primary"
+    >
+      Analyze repository
+    </button>
+    <button
+      mat-stroked-button
+      [routerLink]="['create', 'analyze-commits']"
+      color="primary"
+    >
+      Analyze commits
+    </button>
+  </mat-card-actions>
+</mat-card>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Tasks</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let task of tasks">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ task.type }}</mat-panel-title>
+          <mat-panel-description>
+            {{ task.status.type }} - {{ task.status.updatedAt | date }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-list>
+          <mat-list-item>
+            <span matListItemTitle>{{ task.createdAt | date }}</span>
+            <span matListItemLine>createdAt</span>
+          </mat-list-item>
+          <mat-list-item *ngFor="let taskOption of task.options | keyvalue">
+            <span matListItemTitle>{{ taskOption.value }}</span>
+            <span matListItemLine>{{ taskOption.key }}</span>
+          </mat-list-item>
+        </mat-list>
+
+        <mat-action-row>
+          <button mat-button [routerLink]="['view', task.id]">View</button>
+          <button
+            mat-button
+            [routerLink]="['/repositories', 'view', task.repositoryId]"
+            *ngIf="task.repositoryId"
+          >
+            View repository
+          </button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-paginator
+      [pageIndex]="paginationPageIndex"
+      [pageSize]="paginationPageSize"
+      [disabled]="paginationDisabled"
+      hidePageSize="true"
+      [length]="paginationItemCount"
+      (page)="pagination$.next($event)"
+      showFirstLastButtons="true"
+    />
+  </mat-card-footer>
+</mat-card>

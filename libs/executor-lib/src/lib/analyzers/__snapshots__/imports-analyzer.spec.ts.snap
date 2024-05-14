@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImportsAnalyzer 1`] = `
+[
+  AnalysisOutput {
+    "data": {
+      "file": "HelloWorld.java",
+      "imported": "java.util",
+      "packageName": "code_samples",
+      "type": "import",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "className": "HelloWorld",
+      "file": "HelloWorld.java",
+      "packageName": "code_samples",
+      "type": "package_or_class",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "nested/IsEven.java",
+      "imported": "java.util",
+      "packageName": "code_samples.nested",
+      "type": "import",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "className": "IsEven",
+      "file": "nested/IsEven.java",
+      "packageName": "code_samples.nested",
+      "type": "package_or_class",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "packageName": "code_samples",
+      "type": "package_or_class",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "packageName": "code_samples.nested",
+      "type": "package_or_class",
+    },
+    "index": "public_sca_analysis_result_repositories",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "HelloWorld.java",
+      "imported": "java.util",
+      "packageName": "code_samples",
+      "type": "import",
+    },
+    "index": "public_sca_analysis_result_repository_imports",
+  },
+  AnalysisOutput {
+    "data": {
+      "file": "nested/IsEven.java",
+      "imported": "java.util",
+      "packageName": "code_samples.nested",
+      "type": "import",
+    },
+    "index": "public_sca_analysis_result_repository_imports",
+  },
+]
+`;

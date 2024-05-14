@@ -1,0 +1,27 @@
+--- /usr/share/opensearch/config/opensearch-security/config.yml	2024-02-20 02:54:30.000000000 +0000
++++ /tmp/config/opensearch-security/config.yml	2020-04-16 12:00:00.000000000 +0000
+@@ -75,10 +75,9 @@
+     http:
+       anonymous_auth_enabled: false
+       xff:
+-        enabled: false
+-        internalProxies: '192\.168\.0\.10|192\.168\.0\.11' # regex pattern
+-        #internalProxies: '.*' # trust all internal proxies, regex pattern
+-        #remoteIpHeader:  'x-forwarded-for'
++        enabled: true
++        internalProxies: '.*' # trust all internal proxies, regex pattern
++        remoteIpHeader:  'x-forwarded-for'
+         ###### see https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html for regex help
+         ###### more information about XFF https://en.wikipedia.org/wiki/X-Forwarded-For
+         ###### and here https://tools.ietf.org/html/rfc7239
+@@ -110,8 +109,8 @@
+           type: intern
+       proxy_auth_domain:
+         description: "Authenticate via proxy"
+-        http_enabled: false
+-        transport_enabled: false
++        http_enabled: true
++        transport_enabled: true
+         order: 3
+         http_authenticator:
+           type: proxy

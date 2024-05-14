@@ -1,0 +1,50 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Class explorer</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+      <mat-card>
+        <mat-card-content>
+          <mat-form-field>
+            <mat-label>Search package or class name</mat-label>
+            <input matInput formControlName="searchText" />
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button type="submit" [disabled]="!form.valid">
+            Search
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+    <mat-divider />
+    <mat-card *ngIf="isNoDataAvailable">
+      <mat-card-header>
+        <mat-card-title>No data available</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          There is no data available for the specified repository and commit.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-list *ngIf="items$ | async as items">
+      <mat-list-item *ngFor="let item of items" matRipple>
+        <mat-icon matListItemIcon>code</mat-icon>
+        <div matListItemTitle>{{ item.packageName }}.{{ item.className }}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-paginator
+      [pageIndex]="paginationPageIndex"
+      [pageSize]="paginationPageSize"
+      [disabled]="paginationDisabled"
+      hidePageSize="true"
+      [length]="paginationItemCount"
+      (page)="pagination$.next($event)"
+      showFirstLastButtons="true"
+    />
+  </mat-card-footer>
+</mat-card>

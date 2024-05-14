@@ -1,0 +1,7 @@
+VERSION 0.8
+
+docker-compose:
+    FROM scratch
+    WORKDIR /app/
+    COPY docker-compose.yml /app/files/docker-compose.yml
+    SAVE ARTIFACT files/

@@ -1,0 +1,72 @@
+{
+  "name": "executor",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/executor/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/executor",
+        "main": "apps/executor/src/main.ts",
+        "additionalEntryPoints": [
+          {
+            "entryName": "cmd/analyze-repo",
+            "entryPath": "apps/executor/src/cmd/analyze-repo.ts"
+          },
+          {
+            "entryName": "cmd/git-history",
+            "entryPath": "apps/executor/src/cmd/git-history.ts"
+          },
+          {
+            "entryName": "cmd/git-latest-commit",
+            "entryPath": "apps/executor/src/cmd/git-latest-commit.ts"
+          },
+          {
+            "entryName": "cmd/merge-results",
+            "entryPath": "apps/executor/src/cmd/merge-results.ts"
+          },
+          {
+            "entryName": "cmd/sonarqube",
+            "entryPath": "apps/executor/src/cmd/sonarqube.ts"
+          }
+        ],
+        "tsConfig": "apps/executor/tsconfig.app.json",
+        "assets": ["apps/executor/src/assets"],
+        "generatePackageJson": true,
+        "isolatedConfig": true,
+        "webpackConfig": "apps/executor/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/executor/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/executor/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,109 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <mat-card *ngIf="repositories$ | async as repositories">
+    <mat-card-header>
+      <mat-card-title>Explore</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Repository</mat-label>
+        <input
+          #repositoryInput
+          type="text"
+          matInput
+          formControlName="repositoryName"
+          [matAutocomplete]="repositoryAutocomplete"
+          (input)="autocompleteRepository$.next(repositoryInput.value)"
+          (focus)="autocompleteRepository$.next(repositoryInput.value)"
+        />
+        <mat-autocomplete
+          requireSelection
+          #repositoryAutocomplete="matAutocomplete"
+        >
+          <ng-container *ngFor="let repository of repositories">
+            <mat-option [value]="repository.repositoryName">{{
+              repository.repositoryName
+            }}</mat-option>
+          </ng-container>
+        </mat-autocomplete>
+        <mat-hint *ngIf="form.controls.repositoryName.value as repositoryName"
+          >Selected: {{ repositoryName }}</mat-hint
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Git commit</mat-label>
+        <input
+          #analysisInput
+          type="text"
+          matInput
+          formControlName="gitCommit"
+          [matAutocomplete]="analysisAutocomplete"
+          (input)="autocompleteAnalysis$.next(analysisInput.value)"
+          (focus)="autocompleteAnalysis$.next(analysisInput.value)"
+        />
+        <mat-autocomplete
+          requireSelection
+          #analysisAutocomplete="matAutocomplete"
+        >
+          <mat-option
+            *ngFor="let commit of commits"
+            [value]="commit.gitCommit.hash"
+          >
+            {{ commit.gitCommit.createdAt | date }} -
+            {{ commit.gitCommit.hash }}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-hint>Search by date</mat-hint>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+      <mat-card *ngFor="let item of explorers">
+        <mat-card-header>
+          <mat-card-title>{{ item.name | uppercase }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ item.description }}</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-divider></mat-divider>
+      <mat-form-field>
+        <mat-label>Explorer</mat-label>
+        <mat-select formControlName="explorer">
+          <mat-option *ngFor="let item of explorers" [value]="item.name">{{
+            item.name
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button type="submit" [disabled]="!form.valid">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+<mat-card *ngIf="bookmarks$ | async as bookmarks">
+  <mat-card-header>
+    <mat-card-title>Bookmarks</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let bookmark of bookmarks">
+        <mat-icon matListItemIcon (click)="openBookmark(bookmark)"
+          >bookmark</mat-icon
+        >
+        <div matListItemTitle>{{ bookmark.name }}</div>
+        <div matListItemLine>{{ bookmark.path }}</div>
+        <div matListItemMeta (click)="deleteBookmark(bookmark)">Delete</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-paginator
+      [pageIndex]="paginationPageIndex"
+      [pageSize]="paginationPageSize"
+      [disabled]="paginationDisabled"
+      hidePageSize="true"
+      [length]="paginationItemCount"
+      (page)="pagination$.next($event)"
+      showFirstLastButtons="true"
+    />
+  </mat-card-footer>
+</mat-card>

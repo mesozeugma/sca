@@ -1,0 +1,32 @@
+VERSION 0.8
+
+alpine:
+    FROM alpine:3.19.1
+
+docker-cli:
+    FROM docker:25.0.4-cli
+    SAVE ARTIFACT /usr/local/bin/docker
+    SAVE ARTIFACT /usr/local/libexec/docker/cli-plugins/docker-buildx
+    SAVE ARTIFACT /usr/local/libexec/docker/cli-plugins/docker-compose
+
+earthly:
+    FROM earthly/earthly:v0.8.4
+    WORKDIR /usr/bin
+    SAVE ARTIFACT earthly
+
+IMPORT_BINARY_DEPENDENCIES:
+    FUNCTION
+    COPY +docker-cli/docker /usr/local/bin/
+    RUN docker --version
+    COPY +earthly/earthly /usr/local/bin/
+    RUN earthly --version
+
+docker-image:
+    FROM ../../+node
+    DO +IMPORT_BINARY_DEPENDENCIES
+
+    DO ../../+APP --APP_NAME="backend"
+
+    ENV NODE_ENV="production"
+    ENTRYPOINT ["node"]
+    CMD ["main.js"]
